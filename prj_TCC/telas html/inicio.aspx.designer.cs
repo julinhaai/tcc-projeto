@@ -24,14 +24,14 @@ namespace prj_TCC.telas_html
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controle BtnI cnicio.
+        /// Controle BtnInicio.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnI cnicio;
-        
+        protected global::System.Web.UI.WebControls.Button BtnInicio;
+
         /// <summary>
         /// Controle BtnProjetos.
         /// </summary>
@@ -76,14 +76,5 @@ namespace prj_TCC.telas_html
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnCadastro;
-
-        /// <summary>
-        /// Controle BtnSlide.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSlide;
     }
 }

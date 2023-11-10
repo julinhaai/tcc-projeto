@@ -45,30 +45,6 @@
             <h2>Sucessos da ETECAF!</h2>
             <p>Confira os projetos mais promissores da ETEC, que conquistaram a bolsa da Unisantos e deram vida às suas ideias!</p><br />
         </div>
-        <div class="slider">
-            <div class="slide-container">
-                <div class="slide-content">
-                    <div class="card-wrapper">
-                        <div class="card">
-                            <div class="image-content">
-                                <span class="overlay"></span>
-
-                                <div class="card-image">
-                                    <img src="img/8011901.jpg" class="card-image" />
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-                                <h2 class="name">Quill Pen</h2>
-                                <p class="description">Uma startup tecnológica que busca retomar o uso de canetas de penas, porém ecológicas e sem crueldade animal</p>
-                                <asp:Button ID="BtnSlide" runat="server" cssclass="btn-slide" Text="Ver Mais" />
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </form>
 </body>
 </html>
