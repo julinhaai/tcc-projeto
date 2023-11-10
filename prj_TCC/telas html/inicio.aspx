@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="estilo.css" />
     <script src='script.js'></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"crossoringin="">
+<%--importar fonte: bai jamjuree regular, medium, semibold--%>
 </head>
 <body>
     <form id="form1" runat="server">
