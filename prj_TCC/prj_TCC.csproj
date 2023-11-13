@@ -80,12 +80,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="swiper.aspx" />
+    <Content Include="telas html\aaaa.aspx" />
     <Content Include="telas html\cadastro.aspx" />
+    <Content Include="telas html\cadastro.css" />
     <Content Include="telas html\img\19 Sem Título %281%29.png" />
     <Content Include="telas html\img\20231031_190612_0000.png" />
+    <Content Include="telas html\img\5495722.jpg" />
     <Content Include="telas html\img\622.jpg" />
     <Content Include="telas html\img\8011901.jpg" />
     <Content Include="telas html\estilo.css" />
+    <Content Include="telas html\img\8287091.jpg" />
     <Content Include="telas html\img\ararara.png.jpeg" />
     <Content Include="telas html\img\user-circle-solid-24.png" />
     <Content Include="telas html\inicio.aspx" />
@@ -94,6 +99,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="swiper.aspx.cs">
+      <DependentUpon>swiper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="swiper.aspx.designer.cs">
+      <DependentUpon>swiper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="telas html\aaaa.aspx.cs">
+      <DependentUpon>aaaa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telas html\aaaa.aspx.designer.cs">
+      <DependentUpon>aaaa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="telas html\cadastro.aspx.cs">
       <DependentUpon>cadastro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

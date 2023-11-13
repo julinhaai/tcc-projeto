@@ -180,50 +180,5 @@ body{
 .sucessos-text h2{
     font-size: 4em;
 }
-.card {
-    border-radius: 25px;
-    background-color: #ffff;
-}
 
-.slide-content {
-    margin: 0 40px;
-}
 
-.card-content {
-    padding: 10px 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.name{
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
-}
-
-.description{
-    font-size:14px;
-    color: #707070;
-    text-align:center;
-}
-
-.image-content{
-    row-gap: 5px;
-}
-
-.btn-slide{
-    border:none;
-    font-size:16px;
-    color: #fff;
-    padding: 8px 16px;
-    background-color: var(--main-color);
-    border-radius: 6px;
-    margin: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-    .btn-slide:hover {
-        background: #621482;
-    }
