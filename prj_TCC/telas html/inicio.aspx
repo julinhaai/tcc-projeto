@@ -14,20 +14,14 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <header>
-        <a href="#"class="logo img">
-            <img src="img/19 Sem Título (1).png" alt="logo">
-        </a>
-        <i class='bx bx-menu' id="menu"></i>
-        <ul class="navbar">
-            <asp:Button ID="BtnInicio" CssClass="navbtn" runat="server" Text="Início" />
-            <asp:Button ID="BtnProjetos" CssClass="navbtn" runat="server" Text="Projetos" />
-            <asp:Button ID="BtnSuporte" CssClass="navbtn" runat="server" Text="Suporte" />
-            <asp:Button ID="BtnSobre" CssClass="navbtn" runat="server" Text="Sobre Nós" />
-        </ul>
-        <div class="header-icon">
-            <asp:ImageButton ID="imgUser" runat="server" ImageUrl="~/telas html/img/user-circle-solid-24.png" />
-        </div>
+    <header class="header">
+        <img src="#" alt-="#" />
+        <nav class="navbar">
+            <a href="inicio.aspx">Início</a>
+            <a href="projetos.aspx">Projetos</a>
+            <a href="suporte.aspx">Suporte</a>
+            <a href="sobre.aspx">Sobre Nós</a>
+        </nav>
     </header>
     <section class="home" id="home">
         <div class="home-text">

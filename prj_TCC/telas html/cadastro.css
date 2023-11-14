@@ -109,6 +109,13 @@ form .input-group .button {
     font-size: 16px;
 }
 
+@media (max-width: 500px) {
+    .w50 {
+        width: 100%;
+        padding: 0;
+    }
+}
+
 @media(max-width: 930px){
     .img-box{
         display: none;
@@ -124,9 +131,3 @@ form .input-group .button {
     }
 }
 
-@media (max-width: 500px){
-    .w50{
-        width: 100%;
-        padding: 0;
-    }
-}
