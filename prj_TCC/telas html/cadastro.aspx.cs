@@ -11,9 +11,6 @@ namespace prj_TCC.telas_html
     {
         
 
-        protected void ddlCPFouCNPJ_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lblResult.Text = ddlCPFouCNPJ.SelectedValue;
-        }
+      
     }
 }
