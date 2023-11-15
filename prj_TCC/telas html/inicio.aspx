@@ -23,22 +23,6 @@
             <a href="sobre.aspx">Sobre Nós</a>
         </nav>
     </header>
-    <section class="home" id="home">
-        <div class="home-text">
-            <h1>Seja bem-vindo!</h1>
-            <p>Aqui é o lugar onde suas ideias ganham vida!</p>
-            <div class="container">
-                <asp:Button ID="BtnCadastro" CssClass="button" runat="server" Text="Faça Parte!" OnClick="BtnCadastro_Click1" />
-            </div>
-        </div>
-        <div class="home-img">
-            <img src="img/20231031_190612_0000.png">
-        </div>
-    </section>
-        <div class="sucessos-text">
-            <h2>Sucessos da ETECAF!</h2>
-            <p>Confira os projetos mais promissores da ETEC, que conquistaram a bolsa da Unisantos e deram vida às suas ideias!</p><br />
-        </div>
     </form>
 </body>
 </html>

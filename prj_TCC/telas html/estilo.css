@@ -38,116 +38,24 @@ body{
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255, 0.4) 
+    background: linear-gradient(90deg, transparent, rgba(255,255,255, 0.4));
+    transition: .5s;
 }
-:root {
-    --main-color: #881BB4;
-    --second-color: #E97D62;
-    --text-color: #F1D2FF;
-    --bg-color: #E1DEFD;
+.header :hover ::before{
+    left: 100%;
 }
 
-section {
-    padding: 50px 100px;
-}
-
-img {
-    width: 100%;
-}
-
-
-
-.logo img {
-    width: 60px;
-}
-
-.navbar {
-    display: flex;
-}
-
-
-
-.home {
-    width: 100%;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.home-text {
-    font-size: 2.5rem;
-    color: var(--main-color);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-    .home-text p {
-        font-size: 1.5rem;
-        color: var(--main-color);
-        margin: 0.5rem;
-    }
-
-.home img {
-    margin-top: 35px;
-}
-
-
-
-.container .button {
-    padding: 10px 20px;
-    width: 200px;
-    border: none;
+.navbar a{
+    color: #ffffff;
     font-size: 18px;
-    font-weight: bold;
-    background: rgb(233,95,107);
-    background: linear-gradient(90deg, rgba(233,95,107,1) 0%, rgba(217,108,109,1) 18%, rgba(202,93,122,1) 36%, rgba(187,78,135,1) 54%, rgba(175,66,146,1) 75%, rgba(161,52,158,1) 100%);
-    color: #fafafa;
-    box-shadow: 0 6px 8px rgba(0,0,0,.1);
-    border-radius: 4px;
-    transition: .4s;
+    text-decoration: none;
+    margin-right: 35px;
+    transition: .3s;
 }
 
-    .container .button:hover {
-        border-radius: 30px;
-    }
-
-.card-image{
-    position:relative;
-    height:150px;
-    width: 150px;
-    border-radius: 50%;
-    background: #ffff;
-    padding: 3px;
+.navbar a:hover{
+        color: #f00;
 }
 
-.card-image .card-img{
-    height: 100%;
-    width: 100%;
-    object-fit:cover;
-    border-radius: 50%;
-    border: 4px solid var(--main-color);
-}
-
-.slider {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: var(--main-color);
-}
-
-
-.sucessos-text {
-    text-align: center;
-    color: #fff;
-    background-color: var(--main-color);
-    padding-top: 24px;
-    
-}
-
-.sucessos-text h2{
-    font-size: 4em;
-}
 
 
