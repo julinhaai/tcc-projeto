@@ -85,11 +85,11 @@
     <Content Include="telas html\cadastro.css" />
     <Content Include="telas html\img\20231031_190612_0000.png" />
     <Content Include="telas html\estilo.css" />
+    <Content Include="telas html\img\27 Sem Título_20231116110307.png" />
     <Content Include="telas html\img\ararara.png.jpeg" />
     <Content Include="telas html\img\Collab-pana.png" />
     <Content Include="telas html\img\Collab-pana.svg" />
     <Content Include="telas html\img\form-img.png" />
-    <Content Include="telas html\img\fundo.png" />
     <Content Include="telas html\img\header.png" />
     <Content Include="telas html\img\home-img.jpg" />
     <Content Include="telas html\img\logo-img.png" />
@@ -97,6 +97,7 @@
     <Content Include="telas html\img\pen.jpg" />
     <Content Include="telas html\img\user-circle-solid-24.png" />
     <Content Include="telas html\inicio.aspx" />
+    <Content Include="telas html\script.js" />
     <Content Include="telas html\projetos.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
