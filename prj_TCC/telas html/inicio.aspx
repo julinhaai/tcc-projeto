@@ -13,23 +13,27 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <header class="header">
-        <a href="#" class="logo"><img src="#" /><span>Ideias Vivas</span></a>
-        <ul class="navbar">
-            <li><a href="inicio.aspx">Início</a></li>
-            <li><a href="projetos.aspx">Projetos</a></li>
-            <li><a href="suporte.aspx">Suporte</a></li>
-            <li><a href="sobre.aspx">Sobre Nós</a></li>
-        </ul>
 
-        <div class="main">
-            <a href="#" class="user"><i class="ri-user-fill"></i>Login</a>
-            <a href="#">Cadastre-se</a>
-            <div class="bx bx-icon" id="menu-icon"></div>
-        </div>
+
+
+
+
+    <header class="header">
+        <a href="#" class="logo"><img src="#" />Ideias Vivas</a>
+
+        <label for="#" class="icons">
+            
+        </label>
+        
+        <nav class="navbar">
+
+            <a href="inicio.aspx">Início</a>
+            <a href="projetos.aspx">Projetos</a>
+            <a href="suporte.aspx">Suporte</a>
+            <a href="sobre.aspx">Sobre Nós</a>
+
+        </nav>
     </header>
-    <%-- link do JS --%>
-        <script src="script.js"></script>
     </form>
 </body>
 </html>

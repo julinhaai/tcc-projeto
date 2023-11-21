@@ -6,16 +6,24 @@
     box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    background-image: url(img/fundo.png);
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size:cover;
-    display:flex;
+body {
+    background-image: url('img/fundo-cadastro.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
     justify-content: center;
     padding: 20px;
     min-height: 100vh;
 }
+
+#ddlCPFouCNPJ {
+    color: #3D3D3D;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
 
 
 .w50{

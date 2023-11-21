@@ -9,8 +9,9 @@ namespace prj_TCC.telas_html
 {
     public partial class cadastro : System.Web.UI.Page
     {
-        
+        protected void ddlCPFouCNPJ_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-      
+        }
     }
 }

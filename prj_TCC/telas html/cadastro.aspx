@@ -29,7 +29,7 @@
 
                <div class="input-group">
                    <asp:Label ID="lblCPFouCNPJ" runat="server" CssClass="label" Text="Selecione:"></asp:Label>
-                   <asp:DropDownList ID="ddlCPFouCNPJ" runat="server">
+                   <asp:DropDownList ID="ddlCPFouCNPJ" runat="server" OnSelectedIndexChanged="ddlCPFouCNPJ_SelectedIndexChanged">
                        <asp:ListItem>CPF</asp:ListItem>
                        <asp:ListItem>CNPJ</asp:ListItem>
                    </asp:DropDownList>
