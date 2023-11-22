@@ -7,9 +7,7 @@
     <title>Ideias Vivas</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" type="text/css" href="estilo.css" />
-    <script src='script.js'></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"crossoringin="">
 </head>
 <body>
     <form id="form1" runat="server">
@@ -21,16 +19,18 @@
     <header class="header">
         <a href="#" class="logo"><img src="#" />Ideias Vivas</a>
 
-        <label for="#" class="icons">
-            
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
         </label>
         
         <nav class="navbar">
 
-            <a href="inicio.aspx">Início</a>
-            <a href="projetos.aspx">Projetos</a>
-            <a href="suporte.aspx">Suporte</a>
-            <a href="sobre.aspx">Sobre Nós</a>
+            <a href="inicio.aspx" style="--i:0;">Início</a>
+            <a href="projetos.aspx" style="--i:1;">Projetos</a>
+            <a href="suporte.aspx"style="--i:2;">Suporte</a>
+            <a href="sobre.aspx" style="--i:3;">Sobre Nós</a>
 
         </nav>
     </header>
