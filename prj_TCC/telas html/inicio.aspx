@@ -34,6 +34,16 @@
 
         </nav>
     </header>
+    <section class="home" id="home">
+        <div class="home-texto">
+            <h1>Seja bem-vindo!</h1>
+            <p>Aqui é lugar onde suas ideias ganham vida!</p>
+            <button class="btn" href="cadastro.aspx">Faça parte!</button>
+        </div>
+        <div class="home-img">
+            <img src="img/MicrosoftTeams-image.png" />
+        </div>
+    </section>
     </form>
 </body>
 </html>
