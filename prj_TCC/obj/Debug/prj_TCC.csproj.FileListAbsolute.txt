@@ -606,3 +606,4 @@ C:\Users\Fabiano\Source\Repos\tcc-projeto\prj_TCC\obj\Debug\prj_TCC.csproj.CoreC
 C:\Users\Fabiano\Source\Repos\tcc-projeto\prj_TCC\obj\Debug\prj_TCC.csproj.CopyComplete
 C:\Users\Fabiano\Source\Repos\tcc-projeto\prj_TCC\obj\Debug\prj_TCC.dll
 C:\Users\Fabiano\Source\Repos\tcc-projeto\prj_TCC\obj\Debug\prj_TCC.pdb
+C:\Users\aluno\Source\Repos\tcc-projeto\prj_TCC\bin\MySql.Data.dll
