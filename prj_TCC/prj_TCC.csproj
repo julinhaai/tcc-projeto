@@ -87,14 +87,12 @@
     <Content Include="telas html\estilo.css" />
     <Content Include="telas html\img\27 Sem Título_20231116110307.png" />
     <Content Include="telas html\img\ararara.png.jpeg" />
-    <Content Include="telas html\img\Collab-pana.png" />
-    <Content Include="telas html\img\Collab-pana.svg" />
     <Content Include="telas html\img\form-img.png" />
     <Content Include="telas html\img\fundo-cadastro.png" />
     <Content Include="telas html\img\fundo-site.png" />
     <Content Include="telas html\img\home-img.jpg" />
+    <Content Include="telas html\img\home-img.png" />
     <Content Include="telas html\img\logo-img.png" />
-    <Content Include="telas html\img\MicrosoftTeams-image.png" />
     <Content Include="telas html\img\panda.jpg" />
     <Content Include="telas html\img\pen.jpg" />
     <Content Include="telas html\img\user-circle-solid-24.png" />

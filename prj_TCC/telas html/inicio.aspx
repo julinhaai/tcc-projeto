@@ -38,10 +38,21 @@
         <div class="home-texto">
             <h1>Seja bem-vindo!</h1>
             <p>Aqui é lugar onde suas ideias ganham vida!</p>
-            <button class="btn" href="cadastro.aspx">Faça parte!</button>
+            <asp:Button ID="btnParte" CssClass="btn" runat="server" Text="Faça Parte" />
         </div>
         <div class="home-img">
-            <img src="img/MicrosoftTeams-image.png" />
+            <img src="img/home-img.png" />
+        </div>
+    </section>
+    <section class="sucessos">
+        <div class="sucessos-text">
+            <h1>Confira os sucesoss da ETECAF!</h1>
+            <p>Aqui estão os projetos promissores desta Etec que conquistaram uma vaga na UNISANTOS!</p>
+        </div>
+        <div class="card">
+            <input type-="radio" name="select" id="slide-1" checked="true" />
+            <input type-="radio" name="select" id="slide-2" checked="true" />
+            <input type-="radio" name="select" id="slide-3" checked="true" />
         </div>
     </section>
     </form>

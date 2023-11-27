@@ -12,21 +12,29 @@
 </head>
 <body>
        <form id="form1" runat="server">
-    <header>
-        <a href="#"class="logo img">
-            <img src="img/19 Sem Título (1).png" alt="logo">
-        </a>
-        <i class='bx bx-menu' id="menu"></i>
-        <ul class="navbar">
-            <asp:Button ID="BtnInicio" CssClass="navbtn" runat="server" Text="Início" />
-            <asp:Button ID="BtnProjetos" CssClass="navbtn" runat="server" Text="Projetos" />
-            <asp:Button ID="BtnSuporte" CssClass="navbtn" runat="server" Text="Suporte" />
-            <asp:Button ID="BtnSobre" CssClass="navbtn" runat="server" Text="Sobre Nós" />
-        </ul>
-        <div class="header-icon">
-            
-        </div>
+    <header class="header">
+        <a href="#" class="logo"><img src="#" />Ideias Vivas</a>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        
+        <nav class="navbar">
+
+            <a href="inicio.aspx" style="--i:0;">Início</a>
+            <a href="projetos.aspx" style="--i:1;">Projetos</a>
+            <a href="suporte.aspx"style="--i:2;">Suporte</a>
+            <a href="sobre.aspx" style="--i:3;">Sobre Nós</a>
+
+        </nav>
     </header>
+        <div class="container">
+            <div class="pesquisa">
+
+            </div>
+        </div>
     </form>
 </body>
 </html>

@@ -16,6 +16,7 @@ body {
     min-height: 100vh;
     background: url('img/fundo-site.png') no-repeat center;
     background-size: cover;
+
 }
 
 .header{
@@ -106,6 +107,11 @@ body {
     margin: 0.5rem 0 1.4rem;
 }
 
+.home-img{
+    position: relative;
+    top: 50px;
+}
+
 .btn {
     width: 200px;
     height: 60px;
@@ -136,6 +142,14 @@ body {
     display:none;
 }
 
+.container {
+    background: linear-gradient(135deg, rgba(255,255,255, .1), rgba(255,255,255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255, .18);
+    box-shadow: 0 8px 12px 0 rgba(0,0,0, .37) ;
+}
 /*RESPONSIVIDADE*/
 
 
@@ -192,6 +206,5 @@ body {
     #check:checked ~ .navbar a {
         transform: translateY(0);
         opacity:1;
-        transition-delay: calc(.15s * var(--i));
     }
 }
