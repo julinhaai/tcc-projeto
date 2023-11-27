@@ -47,7 +47,7 @@
                </div>
 
                <div class="input-group">
-                   <asp:Button ID="btnCadastro" cssclass="button" runat="server" Text="Cadastrar" />
+                   <asp:Button ID="btnCadastro" cssclass="button" runat="server" Text="Cadastrar" OnClick="btnCadastro_Click" />
                </div>
 
            </form>

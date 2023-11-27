@@ -38,7 +38,7 @@
         <div class="home-texto">
             <h1>Seja bem-vindo!</h1>
             <p>Aqui é lugar onde suas ideias ganham vida!</p>
-            <asp:Button ID="btnParte" CssClass="btn" runat="server" Text="Faça Parte" />
+            <asp:Button ID="btnParte" CssClass="btn" runat="server" Text="Faça Parte" OnClick="BtnCadastro_Click1" />
         </div>
         <div class="home-img">
             <img src="img/home-img.png" />
