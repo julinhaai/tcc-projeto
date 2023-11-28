@@ -10,6 +10,11 @@ namespace prj_TCC.telas_html
 {
     public partial class cadastro : System.Web.UI.Page
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+
+        }
         protected void ddlCPFouCNPJ_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -27,8 +32,42 @@ namespace prj_TCC.telas_html
         }
         protected void btnCadastro_Click(object sender, EventArgs e)
         {
-           
-           
+           if (txtNome.Text == string.Empty || txtEmail.Text == string.Empty || txtSenha.Text == string.Empty || txtConfirma.Text == string.Empty)
+            {
+                //lblobs.Text = "Digite todos os campos";
+            }
+            else
+            {
+                MySqlConnection conexao = Conexao();
+                //string comando = "INSERT INTO tb_publico nm_usuario, ds_emailUsuario, cd_cpfUsuario, nm_senha) VALUES( @nm_usuario, @ds_emailUsuario, @cd_cpfUsuario, @nm_senha)";
+                string comando = "INSERT INTO `bd_ideiasvivas`.`tb_publico` (`cd_usuario`, `nm_usuario`, `ds_emailUsuario`, `cd_cpfUsuario`, `nm_senha`) VALUES('2', @nm_usuario, @ds_emailUsuario, @cd_cpfUsuario, @nm_senha)";
+                MySqlCommand inserir = new MySqlCommand(comando, conexao);
+                inserir.Parameters.AddWithValue("@nm_usuario", "" + txtNome.Text + "");
+                inserir.Parameters.AddWithValue("@ds_emailUsuario", "" + txtEmail.Text + "");
+                inserir.Parameters.AddWithValue("@cd_cpfUsuario", "" + txtCPFouCNPJ.Text + "");
+                inserir.Parameters.AddWithValue("@nm_senha", "" + txtSenha.Text + "");
+                inserir.ExecuteNonQuery();
+                conexao.Close();
+                Limpar();
+                //lblobs.Text = "Cadastrado com sucesso!";
+                //Response.Redirect("projetos.aspx");
+                Page_Load(sender, e);
+
+            }
+
         }
+
+        private void Limpar()
+        {
+            txtNome.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtSenha.Text = string.Empty;
+            txtConfirma.Text = string.Empty;
+            txtCPFouCNPJ.Text = string.Empty;
+        }
+
+
+
     }
+
 }
