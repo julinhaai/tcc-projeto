@@ -103,9 +103,11 @@
     <Content Include="telas html\img\img2.png" />
     <Content Include="telas html\img\img3.png" />
     <Content Include="telas html\img\img4.png" />
+    <Content Include="telas html\img\logo-branca-removebg.png" />
     <Content Include="telas html\img\logo-img.png" />
     <Content Include="telas html\img\panda.jpg" />
     <Content Include="telas html\img\pen.jpg" />
+    <Content Include="telas html\img\profile.png" />
     <Content Include="telas html\img\user-circle-solid-24.png" />
     <Content Include="telas html\inicio.aspx" />
     <Content Include="telas html\script.js" />
