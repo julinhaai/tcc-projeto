@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClasseGeral">
+      <HintPath>..\..\..\..\Downloads\Aulas Leguth\ExemploDLL\ClasseGeral.dll</HintPath>
+    </Reference>
     <Reference Include="clsExtenso">
       <HintPath>D:\prj_TCC\clsExtenso.dll</HintPath>
     </Reference>
@@ -87,6 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="telas html\login.aspx" />
     <Content Include="telas html\aaaa.aspx" />
     <Content Include="telas html\cadastro.aspx" />
     <Content Include="telas html\cadastro.css" />
@@ -110,11 +114,19 @@
     <Content Include="telas html\img\profile.png" />
     <Content Include="telas html\img\user-circle-solid-24.png" />
     <Content Include="telas html\inicio.aspx" />
+    <Content Include="telas html\login.css" />
     <Content Include="telas html\script.js" />
     <Content Include="telas html\projetos.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="telas html\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telas html\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="telas html\aaaa.aspx.cs">
       <DependentUpon>aaaa.aspx</DependentUpon>

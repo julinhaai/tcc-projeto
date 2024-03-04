@@ -19,7 +19,7 @@ namespace prj_TCC.telas_html
             Response.Redirect("projetos.aspx");
         }
 
-        protected void BtnCadastro_Click1(object sender, EventArgs e)
+        protected void btncadastro_Click(object sender, EventArgs e)
         {
             Response.Redirect("cadastro.aspx");
         }

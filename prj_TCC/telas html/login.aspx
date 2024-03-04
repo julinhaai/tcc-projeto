@@ -1,24 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cadastro.aspx.cs" Inherits="prj_TCC.telas_html.cadastro" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="prj_TCC.login" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="cadastro.css" />
-    <title>Ideias Vivas</title>
+ <link rel="stylesheet" href="login.css" />
+    <title></title>
 </head>
 <body>
-   <div class="box">
-       <div class="img-box">
-           <img src="img/form-img.png" alt=" " />
-       </div>
-       <div class="form-box">
-           <h2>Criar conta</h2>
-           <p>Já é um membro? <%--<a href="#">Login</a>--%></p>
-           <form id="form1" runat="server">
-               <asp:Button ID="btnlogin" runat="server" Text="Login" OnClick="btnlogin_Click" />
-               <div class="input-group">
+    <form id="form1" runat="server">
+        <div>
+         <div class="input-group">
                    <asp:Label ID="lblNome" runat="server"  CssClass="label" Text="Nome Completo"></asp:Label>
                    <asp:TextBox ID="txtNome" runat="server"  CssClass="text" placeholder="Digite o seu nome completo"></asp:TextBox>
                </div>
@@ -48,14 +41,11 @@
                </div>
 
                <div class="input-group">
-                   <asp:Button ID="btnCadastro" cssclass="button" runat="server" Text="Cadastrar" OnClick="btnCadastro_Click" />
+                   <asp:Button ID="btnlogin2" cssclass="button" runat="server" Text="Login" OnClick="btnlogin_Click" />
                    <asp:Label ID="lblObs" runat="server" Text=""></asp:Label>
                </div>
-
-           </form>
-       </div>
-   </div>
+        
+        </div>
+    </form>
 </body>
 </html>
-
-

@@ -30,6 +30,7 @@
             <a href="suporte.aspx"style="--i:2;">Suporte</a>
             <a href="suporte.aspx"style="--i:2;">Planos</a>
             <a href="sobre.aspx" style="--i:3;"></a>
+            <asp:Button ID="btncadastro" runat="server" Text="Cadastre-se" OnClick="btncadastro_Click" />
 
         </nav>
     </header>
@@ -41,7 +42,8 @@
                <h1>Guardando Conhecimento, expondo talentos.</h1>
                <p>Aqui, no Ideias Vivas, os seus projetos acadêmicos têm a oportunidade de se tronar em grandes starups. A sua chance de sucesso está aqui!
                    Vai perder essa oportunidade?</p>
-               <a href="cadastro.aspx"><button>Saiba mais!</button></a>
+               <a href="cadastro.aspx"><button>Saiba mais!</button></a> 
+
            </div>
            <div class="box-container">
 

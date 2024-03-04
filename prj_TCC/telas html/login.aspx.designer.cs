@@ -7,11 +7,11 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace prj_TCC.telas_html
+namespace prj_TCC
 {
 
 
-    public partial class cadastro
+    public partial class login
     {
 
         /// <summary>
@@ -22,15 +22,6 @@ namespace prj_TCC.telas_html
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
-        /// Controle btnlogin.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnlogin;
 
         /// <summary>
         /// Controle lblNome.
@@ -123,13 +114,13 @@ namespace prj_TCC.telas_html
         protected global::System.Web.UI.WebControls.TextBox txtConfirma;
 
         /// <summary>
-        /// Controle btnCadastro.
+        /// Controle btnlogin2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCadastro;
+        protected global::System.Web.UI.WebControls.Button btnlogin2;
 
         /// <summary>
         /// Controle lblObs.
