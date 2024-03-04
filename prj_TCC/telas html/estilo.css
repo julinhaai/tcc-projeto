@@ -237,7 +237,7 @@ header {
 .home::before{
     content: '';
     position: absolute;
-    bottom: -28%; left: 50%;
+    bottom: -35%; left: 50%;
     transform: translateX(-50%);
     border-top:70vh solid #fff;
     width: 120%;
@@ -246,48 +246,34 @@ header {
 }
 
 .slide-container {
-    margin: 0 30px;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.slide {
+    width: 300px; 
+    margin-right: 10px;
 }
 
 .card {
+    flex: 0 0 100%; /**/
     background: #fff;
     border-radius: 8px;
+    box-sizing: border-box;
+    text-align:center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 2rem;
 }
 
-    .card .image-box {
-        height: 200px;
-    }
-
-        .card .image-box img {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px 8px 0 0;
-        }
-
-    .card .profile-details {
-        display: flex;
-        align-items: center;
-        column-gap: 12px;
-        padding: 15px;
-    }
-
-        .card .profile-details img {
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-        }
-
-.profile-details .name {
-    font-size: 15px;
-    font-weight: 500;
+.card img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
-.profile-details .job {
-    font-size: 12px;
-    font-weight: 500;
-    color: #4d4d4d;
-}
 
 .swiper-navBtn {
     color: #000;

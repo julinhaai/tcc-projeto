@@ -71,7 +71,25 @@
             <h1 class="heading">Nossos sucessos!</h1>
             <h3 class="title">Confira os projetos que ganharam vida!</h3>
             <div class="linha">
-                
+            </div>
+            <div class="slide-container">
+                <div class="slider">
+                     <div class="card" id="card1">
+                    <img src="img/img1.png" alt="perfil 1" />
+                    <p>Descrição teste 1</p>
+                    <button>Ver mais</button>
+                    </div>
+                    <div class="card" id="card2">
+                    <img src="img/img2.png" alt="perfil 2" />
+                    <p>Descrição teste 2</p>
+                    <button>Ver mais</button>
+                    </div>
+                     <div class="card" id="card3">
+                    <img src="img/img1.png" alt="perfil 3" />
+                    <p>Descrição teste 3</p>
+                    <button>Ver mais</button>
+                    </div>
+               </div>
             </div>
         </section>
     <!-- fim nossos sucessos-->
