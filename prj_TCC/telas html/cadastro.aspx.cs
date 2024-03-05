@@ -30,7 +30,7 @@ namespace prj_TCC.telas_html
         {
             if (txtNome.Text == string.Empty || txtEmail.Text == string.Empty || txtSenha.Text == string.Empty || txtConfirma.Text == string.Empty)
             {
-                //lblobs.Text = "Digite todos os campos";
+                lblObs.Text = "Digite todos os campos";
             }
             else
             {
@@ -59,6 +59,7 @@ namespace prj_TCC.telas_html
                     {
                         lblObs.Text = "As senhas não conferem. Digite novamente.";
                         txtSenha.Focus();
+
                     }
                     return;
 
