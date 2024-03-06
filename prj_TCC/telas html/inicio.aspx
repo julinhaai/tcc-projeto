@@ -22,78 +22,26 @@
             <i class='bx bx-menu' id="menu-icon"></i>
             <i class='bx bx-x' id="close-icon"></i>
         </label>
-        
+
         <nav class="navbar">
 
             <a href="inicio.aspx" style="--i:0;">Início</a>
             <a href="projetos.aspx" style="--i:1;">Projetos</a>
             <a href="suporte.aspx"style="--i:2;">Suporte</a>
-            <a href="suporte.aspx"style="--i:2;">Planos</a>
-            <a href="sobre.aspx" style="--i:3;"></a>
-            <asp:Button ID="btncadastro" runat="server" Text="Cadastre-se" OnClick="btncadastro_Click" />
-
+            <a href="suporte.aspx"style="--i:3;">Planos</a>
+            <a href="cadastro.aspx" style="--i:4" class="btn-cadastro">Cadastre-se!</a>
         </nav>
     </header>
     <!-- fim barra de navegação-->
 
+
+
     <!-- inicio pagina principal-->
-       <section class="home" id="home">
-           <div class="content">
-               <h1>Guardando Conhecimento, expondo talentos.</h1>
-               <p>Aqui, no Ideias Vivas, os seus projetos acadêmicos têm a oportunidade de se tronar em grandes starups. A sua chance de sucesso está aqui!
-                   Vai perder essa oportunidade?</p>
-               <a href="cadastro.aspx"><button>Saiba mais!</button></a> 
-
-           </div>
-           <div class="box-container">
-
-               <div class="box">
-                   <i class='bx bx-desktop'></i>
-                   <h3>Inovação sempre!</h3>
-                   <p>Você encontrará projetos inovadores e criativos, sempre olhando além.</p>
-               </div>
-
-               <div class="box">
-                   <i class='bx bx-color'></i>
-                   <h3>Pluralidade tech!</h3>
-                   <p>Desde um sistema comercial, até a criação de um smartphone. Tem de tudo!</p>
-               </div>
-
-               <div class="box">
-                   <i class='bx bxs-group'></i>
-                   <h3>Comunidade ativa!</h3>
-                   <p>Alunos e professores,todos juntos construindo um futuro promissor.</p>
-               </div>
-           </div>
-       </section>
+       
     <!-- fim pagina principal-->
     
     <!-- início nossos sucessos-->
-        <section class="sucessos" id="sucessos">
-            <h1 class="heading">Nossos sucessos!</h1>
-            <h3 class="title">Confira os projetos que ganharam vida!</h3>
-            <div class="linha">
-            </div>
-            <div class="slide-container">
-                <div class="slider">
-                     <div class="card" id="card1">
-                    <img src="img/img1.png" alt="perfil 1" />
-                    <p>Descrição teste 1</p>
-                    <button>Ver mais</button>
-                    </div>
-                    <div class="card" id="card2">
-                    <img src="img/img2.png" alt="perfil 2" />
-                    <p>Descrição teste 2</p>
-                    <button>Ver mais</button>
-                    </div>
-                     <div class="card" id="card3">
-                    <img src="img/img1.png" alt="perfil 3" />
-                    <p>Descrição teste 3</p>
-                    <button>Ver mais</button>
-                    </div>
-               </div>
-            </div>
-        </section>
+      
     <!-- fim nossos sucessos-->
     
 
