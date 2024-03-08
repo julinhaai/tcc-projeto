@@ -13,7 +13,7 @@ namespace prj_TCC.telas_html
         protected void Page_Load(object sender, EventArgs e)
         {
 
-
+            //colocar para identificar usuário.
         }
 
         private static MySqlConnection Conexao()
@@ -44,16 +44,19 @@ namespace prj_TCC.telas_html
                 inserir.Parameters.AddWithValue("@ds_email", "" + txtEmail.Text + "");
                 if (ClasseGeral.clsGeral.ValidaCPF(txtCPFouCNPJ.Text))
                 {
-                    lblCPF.Text = "";
+           
                     if (txtSenha.Text == txtConfirma.Text || (ClasseGeral.clsGeral.ValidaCPF(txtCPFouCNPJ.Text)))
                     {
+                        
                         inserir.ExecuteNonQuery();
-                        conexao.Close();
+                        
                         //Response.Redirect("");
                         Limpar();
                         lblObs.Text = "Cadastrado com sucesso!";
                         //Response.Redirect("projetos.aspx");
                         Page_Load(sender, e);
+
+
                     }
                     else
                     {
@@ -71,6 +74,25 @@ namespace prj_TCC.telas_html
                     txtCPFouCNPJ.Focus();
                     return;
                 }
+                //MySqlCommand cSQL = new MySqlCommand(comando, conexao);
+                //MySqlDataReader dados = cSQL.ExecuteReader();
+                //conexao.Close();
+                //if (!dados.HasRows)
+                //{
+                   
+                //}
+                //else
+                //{
+                //    dados.Read();
+                //    // lblCPF.Text = "CPF= " + dados[0].ToString();
+                //    //lblNome.Text = "Nome= " + dados[1].ToString();
+                //    lblEmail.Text = "Email= " + dados[3].ToString();
+                //    lblSenha.Text = "Senha= " + dados[2].ToString();
+                //    lblObs.Text = "CPF já cadastrado!";
+                //    Response.Redirect("inicio.aspx");
+
+
+                //}
 
             }
 
