@@ -6,46 +6,41 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
  <link rel="stylesheet" href="login.css" />
-    <title></title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+    <title>Login - Ideias Vivas</title>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div class="img-box">
-           <img src="img/form-img.png" alt=" " />
+
+        <div class="wrapper">
+             <form id="form1" runat="server">
+                 <h1>Login</h1>
+                 <div class="labels-banco">
+                     <asp:Label ID="lblObs" runat="server" Text="Label"></asp:Label>
+                     <asp:Label ID="lblEmail" runat="server" Text="Label"></asp:Label>
+                     <asp:Label ID="lblSenha" runat="server" Text="Label"></asp:Label>
+                 </div>
+                 <div class="input-box">
+                     <asp:TextBox ID="txtEmail" runat="server" placeholder="Email" CssClass="input"></asp:TextBox>
+                     <i class='bx bxs-user'></i>
+                 </div>
+                 <div class="input-box">
+                     <asp:TextBox ID="txtSenha" runat="server" placeholder="Senha" CssClass="input"></asp:TextBox>
+                     <i class='bx bxs-lock-alt' ></i>
+                 </div>
+                 <div class="remember-forgot">
+                     <label>
+                         <asp:CheckBox ID="CheckBox1" runat="server" Text="Manter Conectado" CssClass="forgot"/></label>
+                        <a href="#">Esqueceu a senha?</a>
+                 </div>
+
+                 <asp:Button type="submit" ID="btnLogin" CssClass="btn" runat="server" Text="Login" />
+
+                 <div class="register-link">
+                     <p>Não tem uma conta? <a href="cadastro.aspx">Cadastre-se</a></p>
+                 </div>
+          
+             </form>
         </div>
-       <%--  <div class="input-group">
-                   <asp:Label ID="lblNome" runat="server"  CssClass="label" Text="Nome Completo"></asp:Label>
-                   <asp:TextBox ID="txtNome" runat="server"  CssClass="text" placeholder="Digite o seu nome completo"></asp:TextBox>
-               </div>--%>
-
-               <div class="input-group">
-                   <asp:Label ID="lblEmail" runat="server" CssClass="label" Text="Email"></asp:Label>
-                   <asp:TextBox ID="txtEmail" runat="server" CssClass="text" placeholder="Digite o seu Email"></asp:TextBox>
-               </div>
-
-               <%--<div class="input-group">
-                   <asp:Label ID="lblCPF" runat="server" CssClass="label" Text="CPF:"></asp:Label>--%>
-                   <%--<asp:DropDownList ID="ddlCPFouCNPJ" runat="server" OnSelectedIndexChanged="ddlCPFouCNPJ_SelectedIndexChanged">
-                       <asp:ListItem>CPF</asp:ListItem>
-                       <asp:ListItem>CNPJ</asp:ListItem>
-                   </asp:DropDownList>--%>
-                  <%-- <asp:TextBox ID="txtCPFouCNPJ" runat="server" CssClass="text" placeholder=""></asp:TextBox>
-               </div>--%>
-
-               <div class="input-group w50">
-                   <asp:Label ID="lblSenha" runat="server" CssClass="label" Text="Digite sua senha"></asp:Label>
-                   <asp:TextBox ID="txtSenha" TextMode="Password" CssClass="text" runat="server" placeholder="Digite sua senha"></asp:TextBox>
-               </div>
-
-              <%-- <div class="input-group w50">
-                   <asp:Label ID="lblConfirma" runat="server" CssClass="label" Text="Confirmar senha"></asp:Label>
-                   <asp:TextBox ID="txtConfirma" TextMode="Password" CssClass="text" runat="server" placeholder="Confirme sua senha"></asp:TextBox>
-               </div>--%>
-
-               <div class="input-group">
-                   <asp:Button ID="btnlogin2" cssclass="button" runat="server" Text="Login" OnClick="btnlogin2_Click" />
-                   <asp:Label ID="lblObs" runat="server" Text=""></asp:Label>
-               </div>
-    </form>
+    
 </body>
 </html>
