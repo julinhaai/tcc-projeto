@@ -26,6 +26,7 @@ namespace prj_TCC.telas_html
             conexao.Open();                                            // abro a conexão
             return conexao;
         }
+        private static List<usuario> usuarios = new List<usuario>();
         protected void btnCadastro_Click(object sender, EventArgs e)
         {
             if (txtNome.Text == string.Empty || txtEmail.Text == string.Empty || txtSenha.Text == string.Empty || txtConfirma.Text == string.Empty)
@@ -93,6 +94,10 @@ namespace prj_TCC.telas_html
 
 
                 //}
+
+            }
+            if (usuario.Any())
+            {
 
             }
 
