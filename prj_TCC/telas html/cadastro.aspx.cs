@@ -108,9 +108,5 @@ namespace prj_TCC.telas_html
             txtCPFouCNPJ.Text = string.Empty;
         }
 
-        protected void btnlogin_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("login.aspx");
-        }
     }
 }

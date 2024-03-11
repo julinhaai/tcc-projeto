@@ -63,12 +63,6 @@
 
     <!-- fim pagina principal-->
     <!-- início nossos sucessos-->
-        <section id="features"<>
-            <h1>Nossos Sucessos</h1>
-            <p>testetestestestestestetstestetstestetstestestetse</p>
-
-        </section>
-
 
 
 
