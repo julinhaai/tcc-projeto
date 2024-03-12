@@ -26,7 +26,6 @@ namespace prj_TCC.telas_html
             conexao.Open();                                            // abro a conexão
             return conexao;
         }
-        private static List<usuario> usuarios = new List<usuario>();
         protected void btnCadastro_Click(object sender, EventArgs e)
         {
             if (txtNome.Text == string.Empty || txtEmail.Text == string.Empty || txtSenha.Text == string.Empty || txtConfirma.Text == string.Empty)
@@ -37,6 +36,26 @@ namespace prj_TCC.telas_html
             {
                 MySqlConnection conexao = Conexao();
                 //string comando = "INSERT INTO tb_publico nm_usuario, ds_emailUsuario, cd_cpfUsuario, nm_senha) VALUES( @nm_usuario, @ds_emailUsuario, @cd_cpfUsuario, @nm_senha)";
+                //conexao.Open();
+                MySqlCommand cSQL = new MySqlCommand();
+                MySqlDataReader dados = cSQL.ExecuteReader();
+                conexao.Close();
+                if (!dados.HasRows)
+                {
+                    return;
+                }
+                else
+                {
+                    dados.Read();
+                    lblCPF.Text = "CPF= " + dados[0].ToString();
+                    //lblNome.Text = "Nome= " + dados[1].ToString();
+                    //lblEmail.Text = "Email= " + dados[3].ToString();
+                    //lblSenha.Text = "Senha= " + dados[2].ToString();
+                    lblObs.Text = "CPF já cadastrado!";
+                    txtCPFouCNPJ.Focus();
+
+
+                }
                 string comando = "INSERT INTO `bd_ideiasvivas`.`tb_usuario` (`cd_cpfUsuario`, `nm_usuario`, `cd_senha`,`ds_email`) VALUES( @cd_cpfUsuario, @nm_usuario, @cd_senha ,@ds_email)";
                 MySqlCommand inserir = new MySqlCommand(comando, conexao);
                 inserir.Parameters.AddWithValue("@cd_cpfUsuario", "" + txtCPFouCNPJ.Text + "");
@@ -75,32 +94,9 @@ namespace prj_TCC.telas_html
                     txtCPFouCNPJ.Focus();
                     return;
                 }
-                //MySqlCommand cSQL = new MySqlCommand(comando, conexao);
-                //MySqlDataReader dados = cSQL.ExecuteReader();
-                //conexao.Close();
-                //if (!dados.HasRows)
-                //{
-                   
-                //}
-                //else
-                //{
-                //    dados.Read();
-                //    // lblCPF.Text = "CPF= " + dados[0].ToString();
-                //    //lblNome.Text = "Nome= " + dados[1].ToString();
-                //    lblEmail.Text = "Email= " + dados[3].ToString();
-                //    lblSenha.Text = "Senha= " + dados[2].ToString();
-                //    lblObs.Text = "CPF já cadastrado!";
-                //    Response.Redirect("inicio.aspx");
-
-
-                //}
-
+                
             }
-            if (usuario.Any())
-            {
-
-            }
-
+            
 
 
         }
