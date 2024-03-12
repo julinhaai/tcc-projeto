@@ -7,19 +7,24 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: seagreen;
+    background: url('img/bg-login.png') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .wrapper{
     width: 420px;
-    background: purple;
+    background: transparent;
     color: #fff;
     border-radius: 10px;
+    border: 2px solid rgba(255,255,255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0, .2);
     padding: 30px 40px;
 }
 
@@ -53,7 +58,7 @@ body{
 
 .input-box i{
     position: absolute;
-    right: 20px;
+    right: 56px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;

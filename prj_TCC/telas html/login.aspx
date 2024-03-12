@@ -15,17 +15,15 @@
              <form id="form1" runat="server">
                  <h1>Login</h1>
                  <div class="labels-banco">
-                     <asp:Label ID="lblObs" runat="server" Text="Label"></asp:Label>
-                     <asp:Label ID="lblEmail" runat="server" Text="Label"></asp:Label>
-                     <asp:Label ID="lblSenha" runat="server" Text="Label"></asp:Label>
+                     <asp:Label ID="lblObs" runat="server" Text=""></asp:Label>
+                     <asp:Label ID="lblEmail" runat="server" Text=""></asp:Label>
+                     <asp:Label ID="lblSenha" runat="server" Text=""></asp:Label>
                  </div>
                  <div class="input-box">
                      <asp:TextBox ID="txtEmail" runat="server" placeholder="Email" CssClass="input"></asp:TextBox>
-                     <i class='bx bxs-user'></i>
                  </div>
                  <div class="input-box">
                      <asp:TextBox ID="txtSenha" runat="server" placeholder="Senha" CssClass="input"></asp:TextBox>
-                     <i class='bx bxs-lock-alt' ></i>
                  </div>
                  <div class="remember-forgot">
                      <label>
