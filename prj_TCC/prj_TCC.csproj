@@ -106,6 +106,7 @@
     <Content Include="telas html\login.css" />
     <Content Include="telas html\script.js" />
     <Content Include="telas html\projetos.aspx" />
+    <Content Include="telas html\estilo-projeto.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

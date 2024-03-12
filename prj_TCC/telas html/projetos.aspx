@@ -6,14 +6,14 @@
     <meta charset='utf-8'>
     <title>Ideias Vivas</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo-projeto.css" />
     <script src='script.js'></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
        <form id="form1" runat="server">
     <header class="header">
-        <a href="#" class="logo"><img src="#" />Ideias Vivas</a>
+        <a href="#" class="logo"><img src="img/logo-branca-removebg.png" />Ideias Vivas</a>
 
         <input type="checkbox" id="check" />
         <label for="check" class="icons">
@@ -30,11 +30,7 @@
 
         </nav>
     </header>
-        <div class="container">
-            <div class="pesquisa">
 
-            </div>
-        </div>
     </form>
 </body>
 </html>
