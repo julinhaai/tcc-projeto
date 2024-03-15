@@ -47,6 +47,7 @@ namespace prj_TCC
                 //lblNome.Text = "Nome= " + dados[1].ToString();
                 lblEmail.Text = "Email= " + dados[3].ToString();
                 lblSenha.Text = "Senha= " + dados[2].ToString();
+                //Console.ReadKey();
                 lblObs.Text = "Registro encontrado!";
                 Response.Redirect("inicio.aspx");
 

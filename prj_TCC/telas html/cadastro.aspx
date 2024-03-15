@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="cadastro.css" />
+    <script scr="JavaScriptUserName.js"></script>
     <title>Ideias Vivas</title>
 </head>
 <body>
@@ -33,7 +34,7 @@
                        <asp:ListItem>CPF</asp:ListItem>
                        <asp:ListItem>CNPJ</asp:ListItem>
                    </asp:DropDownList>--%>
-                   <asp:TextBox ID="txtCPFouCNPJ" runat="server" CssClass="text" placeholder=""></asp:TextBox>
+                   <asp:TextBox ID="txtCPF" runat="server" CssClass="text" placeholder="Digite o seu CPF"></asp:TextBox>
                </div>
 
                <div class="input-group w50">
@@ -54,6 +55,38 @@
            </form>
        </div>
    </div>
+<script runat="server">
+private bool SiteSpecificAuthenticationMethod(string UserName, string Password)
+{
+    // Insert code that implements a site-specific custom 
+    // authentication method here.
+    //
+    // This example implementation always returns false.
+    return false;
+}
+
+private void OnAuthenticate(object sender, AuthenticateEventArgs e)
+{
+    bool Authenticated = false;
+    Authenticated = SiteSpecificAuthenticationMethod(Login1.UserName, Login1.Password);
+
+    e.Authenticated = Authenticated;
+}
+
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head runat="server">
+    <title>ASP.NET Example</title>
+</head>
+<body>
+        <form id="form2" runat="server">
+            <asp:Login id="Login1" runat="server"
+                OnAuthenticate="OnAuthenticate">
+            </asp:Login>
+        </form>
+    </body>
+</html>
 </body>
 </html>
 
