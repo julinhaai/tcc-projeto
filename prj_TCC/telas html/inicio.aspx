@@ -1,4 +1,5 @@
-﻿
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="inicio.aspx.cs" Inherits="prj_TCC.telas_html.inicio" %>
+
 <!DOCTYPE html>
 <html>
 <head>
