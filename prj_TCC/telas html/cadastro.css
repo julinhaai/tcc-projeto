@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background-image: url('img/fundo-cadastro.png');
+    background-image: url('img/bg-login.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,14 +16,6 @@ body {
     padding: 20px;
     min-height: 100vh;
 }
-
-#ddlCPFouCNPJ {
-    color: #3D3D3D;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-
 
 
 .w50{
@@ -37,34 +29,41 @@ body {
     width: 930px;
 }
 
-.img-box{
-    background-color: rgba(255, 255, 255, 0.5);
+.img-box {
+    background-color: transparent;
     width: 50%;
-    display:flex;
+    display: flex;
     align-items: center;
     padding: 20px;
     border-radius: 20px 0 0 20px;
+    border: 2px solid rgba(255,255,255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0, .2);
+    padding: 30px 40px;
 }
 
 .img-box img{
     width: 100%;
-} 
+}
 
-.form-box{
-    background-color:rgba(255,255,255,0.4);
-    backdrop-filter:blur(40px);
+.form-box {
+    background-color: transparent;
+    backdrop-filter: blur(40px);
     padding: 30px 40px;
     width: 50%;
     border-radius: 0 20px 20px 0;
+    border: 2px solid rgba(255,255,255, .2);
+    box-shadow: 0 0 10px rgba(0,0,0, .2);
 }
 
 .form-box h2{
     font-size: 30px;
+    color: #881BB4;
 }
 
 .form-box p{
     font-weight: bold;
-    color: #3D3D3D;
+    color: #fafaf4;
 }
 
 .form-box a {
@@ -81,7 +80,7 @@ form .input-group{
 }
 
 form .input-group .label{
-    color: #3D3D3D;
+    color: #fafaf4;
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
@@ -96,12 +95,17 @@ form .input-group .text{
     border: 2px solid transparent;
     padding: 15px;
     font-size: 15px;
-    color: #616161;
+    color: #fafaf4;
     transition: all 0.4s ease;
 }
 
 form .input-group .text:focus {
     border-color: #881BB4;
+}
+
+form .input-group .text::placeholder{
+    color: #fff;
+    opacity: .5;
 }
 
 form .input-group .button {
@@ -115,6 +119,10 @@ form .input-group .button {
     color: white;
     cursor: pointer;
     font-size: 16px;
+}
+
+form .input-group .label-obs{
+    color: #fafaf4;
 }
 
 @media (max-width: 500px) {
