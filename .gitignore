@@ -1,0 +1,7 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/prj_TCC/telas html/login.aspx
+/prj_TCC/telas html/login.aspx.cs
+/prj_TCC/telas html/login.aspx.designer.cs
