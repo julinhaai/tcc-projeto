@@ -92,7 +92,6 @@
   <ItemGroup>
     <Content Include="telas html\img\img-home-1.jpg" />
     <Content Include="telas html\img\img-home-2.jpg" />
-    <Content Include="telas html\JavaScriptUserName.js" />
     <Content Include="telas html\login.aspx" />
     <Content Include="telas html\aaaa.aspx" />
     <Content Include="telas html\cadastro.aspx" />
