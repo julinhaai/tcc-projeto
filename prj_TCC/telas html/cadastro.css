@@ -6,6 +6,7 @@
     box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body {
     background-image: url('img/bg-login.png');
     background-position: center;
@@ -32,18 +33,22 @@ body {
 .img-box {
     background-color: transparent;
     width: 50%;
-    display: flex;
     align-items: center;
     padding: 20px;
     border-radius: 20px 0 0 20px;
     border: 2px solid rgba(255,255,255, .2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0,0,0, .2);
-    padding: 30px 40px;
+    padding: 100px 40px;
 }
 
 .img-box img{
     width: 100%;
+}
+
+.img-box h1{
+    color: #FAFAF4;
+
 }
 
 .form-box {
