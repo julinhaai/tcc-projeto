@@ -14,7 +14,7 @@
 <body>
        <form id="form1" runat="server">
     <header class="header">
-        <a href="#" class="logo"><img src="#" />Ideias Vivas</a>
+        <a href="#" class="logo"><img src="img/logo-branca-removebg.png" />Ideias Vivas</a>
 
         <input type="checkbox" id="check" />
         <label for="check" class="icons">
@@ -31,18 +31,14 @@
 
         </nav>
     </header>
-       <main>
-           <div class="left"></div>
-               <div class="right">
-                   <span></span>
-                   <span></span>
-                   <span></span>
-                   <span></span>
-                   <span></span>
-                   <span></span>
-                   <span></span>
+           <div class="wrapper">
+               <div class="main">
+                   Cards irão aqui!
                </div>
-       </main>
+               <div class="sidebar">
+                   Filtro de pesquisa
+               </div>
+           </div>
     </form>
 </body>
 </html>
