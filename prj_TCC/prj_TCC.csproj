@@ -92,7 +92,6 @@
   <ItemGroup>
     <Content Include="telas html\img\img-home-1.jpg" />
     <Content Include="telas html\img\img-home-2.jpg" />
-    <Content Include="telas html\login.aspx" />
     <Content Include="telas html\aaaa.aspx" />
     <Content Include="telas html\cadastro.aspx" />
     <Content Include="telas html\cadastro.css" />
@@ -105,16 +104,12 @@
     <Content Include="telas html\login.css" />
     <Content Include="telas html\script.js" />
     <Content Include="telas html\projetos.aspx" />
+    <Content Include="telas html\log.aspx" />
+    <Content Include="telas html\suporte.aspx" />
+    <Content Include="telas html\suporte.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="telas html\login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="telas html\login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="telas html\aaaa.aspx.cs">
       <DependentUpon>aaaa.aspx</DependentUpon>
@@ -143,6 +138,20 @@
     </Compile>
     <Compile Include="telas html\projetos.aspx.designer.cs">
       <DependentUpon>projetos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="telas html\log.aspx.cs">
+      <DependentUpon>log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telas html\log.aspx.designer.cs">
+      <DependentUpon>log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="telas html\suporte.aspx.cs">
+      <DependentUpon>suporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telas html\suporte.aspx.designer.cs">
+      <DependentUpon>suporte.aspx</DependentUpon>
     </Compile>
     <Compile Include="usuario.cs" />
     <Compile Include="ValuesController1.cs" />
