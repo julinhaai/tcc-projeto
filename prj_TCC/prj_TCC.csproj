@@ -105,6 +105,8 @@
     <Content Include="telas html\script.js" />
     <Content Include="telas html\projetos.aspx" />
     <Content Include="telas html\log.aspx" />
+    <Content Include="telas html\suporte.aspx" />
+    <Content Include="telas html\suporte.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +145,13 @@
     </Compile>
     <Compile Include="telas html\log.aspx.designer.cs">
       <DependentUpon>log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="telas html\suporte.aspx.cs">
+      <DependentUpon>suporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telas html\suporte.aspx.designer.cs">
+      <DependentUpon>suporte.aspx</DependentUpon>
     </Compile>
     <Compile Include="usuario.cs" />
     <Compile Include="ValuesController1.cs" />
