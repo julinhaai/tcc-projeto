@@ -100,6 +100,7 @@
     <Content Include="telas html\img\fundo-cadastro.png" />
     <Content Include="telas html\img\fundo-site.png" />
     <Content Include="telas html\img\logo-branca-removebg.png" />
+    <Content Include="telas html\img\right-arrow-solid-24.png" />
     <Content Include="telas html\inicio.aspx" />
     <Content Include="telas html\login.css" />
     <Content Include="telas html\script.js" />
@@ -107,6 +108,7 @@
     <Content Include="telas html\log.aspx" />
     <Content Include="telas html\suporte.aspx" />
     <Content Include="telas html\suporte.css" />
+    <Content Include="telas html\XMLFile1.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -14,11 +14,11 @@
 
 .accordion {
     max-width: 400px;
-    box-shadow: 0 0 10px #00000;
+    box-shadow: 0 0 10px #FAF4F4;
     border-radius: 5px;
     overflow: hidden;
     font-family: 'regular', outfit;
-    background-color: #C15BFF
+    background-color: #FAF4F4;
 }
 
 
@@ -37,14 +37,31 @@
     transition: background 0.1s;
 }
 
-.accordion__label:hover {
-        background: #000000(0, 0, 0, 0.1);
- }
+    .accordion__label:hover {
+        background: #FAF4F4(0, 0, 0, 0.1);
+    }
 
-    .accordion__label::after {
+    .accordion_label::after {
         content: **;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         right: 20px;
+        width: 12px;
+        height: 6px;
+        background-image: url('right-arrow-solid-24.png');
+        background-size: contain;
+        transition: transform 0.4s;
     }
+
+.accordion__content{
+    background: #6E1A8F;
+    line-height: 1.5;
+    font-size: 0.85em;
+
+}
+
+.accordion__input{
+    display: none;
+
+}
