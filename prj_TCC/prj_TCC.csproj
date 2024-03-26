@@ -105,6 +105,7 @@
     <Content Include="telas html\script.js" />
     <Content Include="telas html\projetos.aspx" />
     <Content Include="telas html\log.aspx" />
+    <Content Include="telas html\projetos.css" />
     <Content Include="telas html\suporte.aspx" />
     <Content Include="telas html\suporte.css" />
     <Content Include="Web.config" />

@@ -6,7 +6,7 @@
     <meta charset='utf-8'>
     <title>Ideias Vivas</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <link rel="stylesheet" type="text/css" href="projetos.css" />
     <script src='script.js'></script>
     <script src="suporte.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -31,11 +31,18 @@
 
         </nav>
     </header>
-        <div class="container">
-            <div class="pesquisa">
-
-            </div>
-        </div>
+       <main>
+           <div class="left"></div>
+               <div class="right">
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                   <span></span>
+               </div>
+       </main>
     </form>
 </body>
 </html>
