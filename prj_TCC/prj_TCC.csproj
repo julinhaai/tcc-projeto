@@ -102,6 +102,8 @@
     <Content Include="telas html\img\logo-branca-removebg.png" />
     <Content Include="telas html\inicio.aspx" />
     <Content Include="telas html\login.css" />
+    <Content Include="telas html\navbar.css" />
+    <Content Include="telas html\projetos.css" />
     <Content Include="telas html\script.js" />
     <Content Include="telas html\projetos.aspx" />
     <Content Include="telas html\log.aspx" />
