@@ -11,7 +11,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-       <form id="form1" runat="server">
     <header class="header">
         <a href="#" class="logo"><img src="#" />Ideias Vivas</a>
 
@@ -30,11 +29,6 @@
 
         </nav>
     </header>
-        <div class="container">
-            <div class="pesquisa">
-
-            </div>
-        </div>
-    </form>
+      
 </body>
 </html>
