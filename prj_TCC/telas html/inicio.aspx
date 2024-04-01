@@ -30,7 +30,9 @@
             <a href="projetos.aspx" style="--i:1;">Projetos</a>
             <a href="suporte.aspx"style="--i:2;">Suporte</a>
             <a href="suporte.aspx"style="--i:3;">Planos</a>
-            <a href="cadastro.aspx" style="--i:4" class="btn-cadastro">Cadastre-se!</a>
+             <asp:Label ID="lblNomeUsuario" runat="server" Text=""></asp:Label>
+            <a href="minhaarea.aspx" style="--i:4">Minha Área</a>
+            <a href="cadastro.aspx" style="--i:5"class="btn-cadastro">Cadastre-se!</a>
         </nav>
     </header>
     <!-- fim barra de navegação-->

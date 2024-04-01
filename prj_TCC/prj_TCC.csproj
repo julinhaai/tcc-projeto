@@ -101,12 +101,13 @@
     <Content Include="telas html\img\fundo-site.png" />
     <Content Include="telas html\img\logo-branca-removebg.png" />
     <Content Include="telas html\inicio.aspx" />
+    <Content Include="telas html\login.aspx" />
     <Content Include="telas html\login.css" />
+    <Content Include="telas html\minhaarea.aspx" />
     <Content Include="telas html\navbar.css" />
     <Content Include="telas html\projetos.css" />
     <Content Include="telas html\script.js" />
     <Content Include="telas html\projetos.aspx" />
-    <Content Include="telas html\log.aspx" />
     <Content Include="telas html\suporte.aspx" />
     <Content Include="telas html\suporte.css" />
     <Content Include="Web.config" />
@@ -134,19 +135,26 @@
     <Compile Include="telas html\inicio.aspx.designer.cs">
       <DependentUpon>inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="telas html\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telas html\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="telas html\minhaarea.aspx.cs">
+      <DependentUpon>minhaarea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telas html\minhaarea.aspx.designer.cs">
+      <DependentUpon>minhaarea.aspx</DependentUpon>
+    </Compile>
     <Compile Include="telas html\projetos.aspx.cs">
       <DependentUpon>projetos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="telas html\projetos.aspx.designer.cs">
       <DependentUpon>projetos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="telas html\log.aspx.cs">
-      <DependentUpon>log.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="telas html\log.aspx.designer.cs">
-      <DependentUpon>log.aspx</DependentUpon>
     </Compile>
     <Compile Include="telas html\suporte.aspx.cs">
       <DependentUpon>suporte.aspx</DependentUpon>

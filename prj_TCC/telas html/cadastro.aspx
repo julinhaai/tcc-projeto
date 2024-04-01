@@ -15,7 +15,7 @@
        </div>
        <div class="form-box">
            <h2>Criar conta</h2>
-           <p>Já é um membro? <a href="log.aspx">Login</a></p>
+           <p>Já é um membro? <a href="login.aspx">Login</a></p>
            <form id="form1" runat="server">
                <div class="input-group">
                    <asp:Label ID="lblNome" runat="server"  CssClass="label" Text="Nome Completo"></asp:Label>
