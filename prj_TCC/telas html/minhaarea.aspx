@@ -15,9 +15,11 @@
     <form id="form1" runat="server">
         <div>
 
-            <a href="inicioarea.aspx">Início</a>
-            <a href="meusprojetos.aspx>Meus Projetos</a>
+            <a href="minhaarea.aspx">Início</a>
+            <a href="meusprojetos.aspx">Meus Projetos</a>
             <a href="integrantes.aspx"> Integrantes</a>
+            <a href="analise.aspx"> Análise</a>
+            <asp:Button ID="btnsair" runat="server" Text="Sair" OnClick="btnsair_Click" />
 
         </div>
     </form>

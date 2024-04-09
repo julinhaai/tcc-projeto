@@ -100,9 +100,11 @@
     <Content Include="telas html\img\fundo-cadastro.png" />
     <Content Include="telas html\img\fundo-site.png" />
     <Content Include="telas html\img\logo-branca-removebg.png" />
+    <Content Include="telas html\img\souluna.jpg" />
     <Content Include="telas html\inicio.aspx" />
     <Content Include="telas html\login.aspx" />
     <Content Include="telas html\login.css" />
+    <Content Include="telas html\meusprojetos.aspx" />
     <Content Include="telas html\minhaarea.aspx" />
     <Content Include="telas html\navbar.css" />
     <Content Include="telas html\projetos.css" />
@@ -141,6 +143,13 @@
     </Compile>
     <Compile Include="telas html\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="telas html\meusprojetos.aspx.cs">
+      <DependentUpon>meusprojetos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telas html\meusprojetos.aspx.designer.cs">
+      <DependentUpon>meusprojetos.aspx</DependentUpon>
     </Compile>
     <Compile Include="telas html\minhaarea.aspx.cs">
       <DependentUpon>minhaarea.aspx</DependentUpon>

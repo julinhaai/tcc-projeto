@@ -11,7 +11,16 @@ namespace prj_TCC.telas_html
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (true)
+            {
 
+            }
+
+        }
+
+        protected void btnsair_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("inicio.aspx");
         }
     }
 }

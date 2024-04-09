@@ -11,7 +11,7 @@ namespace prj_TCC.telas_html
 {
 
 
-    public partial class minhaarea
+    public partial class meusprojetos
     {
 
         /// <summary>
@@ -24,12 +24,12 @@ namespace prj_TCC.telas_html
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controle btnsair.
+        /// Controle btnalterar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsair;
+        protected global::System.Web.UI.WebControls.Button btnalterar;
     }
 }
