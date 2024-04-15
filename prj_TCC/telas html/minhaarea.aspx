@@ -14,7 +14,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-
+            <asp:Label ID="lblNomeUsuario" runat="server" Text="Label"></asp:Label>
             <a href="minhaarea.aspx">Início</a>
             <a href="meusprojetos.aspx">Meus Projetos</a>
             <a href="integrantes.aspx"> Integrantes</a>
