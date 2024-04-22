@@ -22,28 +22,25 @@ namespace prj_TCC.telas_html
         protected void VerificarLogin()
         {
             // Verifica se o usuário está logado
-            if (Session["Usuario"] == null)
-            {
-                // Se não estiver logado, redireciona para a página de login
-                Response.Redirect("~/login.aspx");
-            }
-            else
+            if (Session["Usuario"] != null)
             {
                 // Se estiver logado, exibe o nome de usuário
                 string nomeUsuario = Session["Usuario"].ToString();
                 lblNomeUsuario.Text = "Bem-vindo, " + nomeUsuario + "!";
+            }
+            else
+            {
+                // Se não estiver logado, redireciona para a página de login
+                Response.Redirect("~/login-ofc.aspx");
 
-                // Exibe o atalho "Minha Área"
-                lnkMinhaArea.Visible = true;
             }
 
-            protected void btnsair_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("inicio.aspx");
-        }
 
-    }
-}
+
+
+
+
+        }    }   }     
 
 
     

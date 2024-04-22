@@ -29,7 +29,7 @@
                         <a href="#">Esqueceu a senha?</a>
                  </div>
 
-                 <asp:Button type="submit" ID="btnLogin" CssClass="btn" runat="server" Text="Login" />
+                 <asp:Button type="submit" ID="btnLogin" CssClass="btn" runat="server" Text="Login" OnClick="btnlogin2_Click" />
 
                  <div class="register-link">
                      <p>Não tem uma conta? <a href="cadastro.aspx">Cadastre-se</a></p>

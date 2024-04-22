@@ -43,7 +43,8 @@ namespace prj_TCC
             else
             {
                 dados.Read();
-               // lblCPF.Text = "CPF= " + dados[0].ToString();
+                // lblCPF.Text = "CPF= " + dados[0].ToString();
+                Session["NomeUsuario"] = dados[1].ToString(); // Supondo que o nome do usuário esteja na coluna "nome"
                 //lblNome.Text = "Nome= " + dados[1].ToString();
                 lblEmail.Text = "Email= " + dados[3].ToString();
                 lblSenha.Text = "Senha= " + dados[2].ToString();

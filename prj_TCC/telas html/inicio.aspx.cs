@@ -16,11 +16,13 @@ namespace prj_TCC.telas_html
                 if (Session["NomeUsuario"] != null)
                 {
                     lblNomeUsuario.Text = "Bem-vindo, " + Session["NomeUsuario"].ToString();
+                    // Exibe o atalho "Minha Área"-
+                    lnkMinhaArea.Visible = true;
                 }
                 //else
                 //{
                 //    // Se o nome do usuário não estiver na sessão, redirecione para a página de login
-                //    Response.Redirect("login.aspx");
+                //    Response.Redirect("login.aspx"); 
                 //}
             }
         }

@@ -17,7 +17,6 @@
     <!--barra de navegação-->
     <header class="header">
         <a href="#" class="logo"><img src="img/logo-branca-removebg.png" />Ideias Vivas</a>
-
         <input type="checkbox" id="check" />
         <label for="check" class="icons">
             <i class='bx bx-menu' id="menu-icon"></i>
@@ -31,10 +30,11 @@
             <a href="suporte.aspx"style="--i:2;">Suporte</a>
             <a href="suporte.aspx"style="--i:3;">Planos</a>
              <asp:Label ID="lblNomeUsuario" runat="server" Text=""></asp:Label>
-            <a href="minhaarea.aspx" style="--i:4">Minha Área</a>
+            <asp:HyperLink ID="lnkMinhaArea"  runat="server" NavigateUrl="~/minhaarea.aspx">Minha Área</asp:HyperLink>
             <a href="cadastro.aspx" style="--i:5"class="btn-cadastro">Cadastre-se!</a>
         </nav>
     </header>
+    <!--<a href="minhaarea.aspx" style="--i:4">Minha Área</a> --!>
     <!-- fim barra de navegação-->
     <!-- inicio pagina principal-->
        
