@@ -14,33 +14,44 @@ namespace prj_TCC.telas_html
 
             if (!IsPostBack)
             {
-                VerificarLogin();
+                if (Session["NomeUsuario"] != null)
+                {
+                    lblNomeUsuario.Text = "Bem-vindo, " + Session["NomeUsuario"].ToString();
+                    // Exibe o atalho "Minha Área"-
+                   //lnkMinhaArea.Visible = true;
+                }
             }
 
         }
 
-        protected void VerificarLogin()
+        protected void btnsair_Click(object sender, EventArgs e)
         {
-            // Verifica se o usuário está logado
-            if (Session["Usuario"] != null)
-            {
-                // Se estiver logado, exibe o nome de usuário
-                string nomeUsuario = Session["Usuario"].ToString();
-                lblNomeUsuario.Text = "Bem-vindo, " + nomeUsuario + "!";
-            }
-            else
-            {
-                // Se não estiver logado, redireciona para a página de login
-                Response.Redirect("~/login-ofc.aspx");
+            Response.Redirect("inicio.aspx");
+        }
 
-            }
+        //protected void VerificarLogin()
+        //{
+        //    // Verifica se o usuário está logado
+        //    if (Session["Usuario"] != null)
+        //    {
+        //        // Se estiver logado, exibe o nome de usuário
+        //        string nomeUsuario = Session["Usuario"].ToString();
+        //        lblNomeUsuario.Text = "Bem-vindo, " + nomeUsuario + "!";
+        //    }
+        //    else
+        //    {
+        //        // Se não estiver logado, redireciona para a página de login
+        //        Response.Redirect("~/login-ofc.aspx");
+
+        //    }
 
 
 
 
 
 
-        }    }   }     
+    }
+}      
 
 
     

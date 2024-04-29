@@ -30,7 +30,7 @@
             <a href="suporte.aspx"style="--i:2;">Suporte</a>
             <a href="suporte.aspx"style="--i:3;">Planos</a>
              <asp:Label ID="lblNomeUsuario" runat="server" Text=""></asp:Label>
-            <asp:HyperLink ID="lnkMinhaArea"  runat="server" NavigateUrl="~/minhaarea.aspx">Minha Área</asp:HyperLink>
+            <asp:HyperLink ID="lnkMinhaArea"  runat="server" NavigateUrl="~/telas html/minhaarea.aspx">Minha Área</asp:HyperLink>
             <a href="cadastro.aspx" style="--i:5"class="btn-cadastro">Cadastre-se!</a>
         </nav>
     </header>

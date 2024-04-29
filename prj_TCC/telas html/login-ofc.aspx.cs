@@ -31,7 +31,8 @@ namespace prj_TCC
             string comando = "Select * ";
             comando += " from tb_usuario WHERE ds_email = ";
             comando += "'" + txtEmail.Text + "'";
-
+            //comando += " from tb_usuario WHERE cd_senha = ";
+            //comando += "'" + txtSenha.Text + "'";
             MySqlCommand cSQL = new MySqlCommand(comando, conexao);              // executando o comando sql na conexao
                                                                                  // OdbcCommand cSQL = new OdbcCommand(comando, conexao);             // executando o comando sql na conexao
             MySqlDataReader dados = cSQL.ExecuteReader();
@@ -44,7 +45,7 @@ namespace prj_TCC
             {
                 dados.Read();
                 // lblCPF.Text = "CPF= " + dados[0].ToString();
-                Session["NomeUsuario"] = dados[1].ToString(); // Supondo que o nome do usuário esteja na coluna "nome"
+                Session["NomeUsuario"] = dados[1].ToString(); // Supondo que o nome do usuário esteja na coluna 1
                 //lblNome.Text = "Nome= " + dados[1].ToString();
                 lblEmail.Text = "Email= " + dados[3].ToString();
                 lblSenha.Text = "Senha= " + dados[2].ToString();
