@@ -18,6 +18,8 @@ namespace prj_TCC.telas_html
                     lblNomeUsuario.Text = "Bem-vindo, " + Session["NomeUsuario"].ToString();
                     // Exibe o atalho "Minha Área"-
                     lnkMinhaArea.Visible = true;
+                    lnkMinhaArea.Text = "Minha Área";
+                    lnkMinhaArea.NavigateUrl = "minhaarea.aspx";
                 }
                 //else
                 //{

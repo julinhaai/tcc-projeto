@@ -747,3 +747,4 @@ C:\Users\suporte\Source\Repos\tcc-projeto\prj_TCC\obj\Debug\prj_TCC.csproj.CoreC
 C:\Users\suporte\Source\Repos\tcc-projeto\prj_TCC\obj\Debug\prj_TCC.csproj.Up2Date
 C:\Users\suporte\Source\Repos\tcc-projeto\prj_TCC\obj\Debug\prj_TCC.dll
 C:\Users\suporte\Source\Repos\tcc-projeto\prj_TCC\obj\Debug\prj_TCC.pdb
+C:\Users\aluno\Source\Repos\tcc-projeto\prj_TCC\bin\ClasseGeral.dll
