@@ -112,6 +112,8 @@
     <Content Include="telas html\projetos.aspx" />
     <Content Include="telas html\suporte.aspx" />
     <Content Include="telas html\suporte.css" />
+    <Content Include="telas html\teste.aspx" />
+    <Content Include="telas html\testepuxar.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +173,20 @@
     </Compile>
     <Compile Include="telas html\suporte.aspx.designer.cs">
       <DependentUpon>suporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="telas html\teste.aspx.cs">
+      <DependentUpon>teste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telas html\teste.aspx.designer.cs">
+      <DependentUpon>teste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="telas html\testepuxar.aspx.cs">
+      <DependentUpon>testepuxar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telas html\testepuxar.aspx.designer.cs">
+      <DependentUpon>testepuxar.aspx</DependentUpon>
     </Compile>
     <Compile Include="usuario.cs" />
     <Compile Include="ValuesController1.cs" />
