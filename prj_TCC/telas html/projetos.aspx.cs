@@ -15,38 +15,46 @@ namespace prj_TCC.telas_html
             public int Id { get; set; }
             public string Name { get; set; }
         }
+        private static MySqlConnection Conexao()
+        {
+            string strConexao = "SERVER=localhost;";                   // crio a string de conexão com todos os dados                
+            strConexao += "UID=root;";                                 // do servidor, nome, senha, banco
+            strConexao += "PASSWORD= root;";                           //senha
+            strConexao += "DATABASE=bd_ideiasvivas";                        // Schema/Banco
+            MySqlConnection conexao = new MySqlConnection(strConexao); // crio o objeto para conexão                           
+            conexao.Open();                                            // abro a conexão
+            return conexao;
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (Session["LastAccessedProjectId"] != null)
+            if (!IsPostBack)
             {
-                int projectId = (int)Session["LastAccessedProjectId"];
+                MySqlConnection conexao = new MySqlConnection Conexao();
+                string comando = "SELECT * ";
+                comando += " FROM tb_projeto WHERE nm_projeto  ";
+                comando += " AND ds_resumoProjeto  ";
+                comando += "'" + txtEmail.Text + "' AND cd_senha = ";
+                comando += "'" + txtSenha.Text + "'";
+                MySqlCommand cSQL = new MySqlCommand(comando, conexao);
+                MySqlDataReader dados = cSQL.ExecuteReader();
+                //MySqlDataReader reader = cmd.ExecuteReader();
 
-                using (MySqlConnection connection = new MySqlConnection("YourConnectionString"))
+                while (reader.Read())
                 {
-                    connection.Open();
+                    string nome = reader.GetString(0);
+                    string descricao = reader.GetString(1);
 
-                    using (MySqlCommand command = new MySqlCommand("SELECT Id, Name FROM Projects WHERE Id = @Id", connection))
-                    {
-                        command.Parameters.AddWithValue("@Id", projectId);
-
-                        using (MySqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                Project lastAccessedProject = new Project
-                                {
-                                    Id = reader.GetInt32(0),
-                                    Name = reader.GetString(1)
-                                };
-
-                                Session["LastAccessedProject"] = lastAccessedProject;
-                            }
-                        }
-                    }
+                    AdicionarProjetoNaPaginaInicial(nome, descricao);
                 }
+
+                conexao.Close();
             }
 
+        }
+        private void AdicionarProjetoNaPaginaInicial(object sender,EventArgs e)
+        {
+        
+            
         }
     }
 }

@@ -33,13 +33,42 @@
     <main>
         <div class="left"></div>
         <div class="right">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            <!--início barra lateral-->
+    <div class="sidebar">
+    <h2>Barra Lateral</h2>
+  </div>
+<!--fim barra lateral-->
+  <div class="content">
+    <div class="card-container">
+        <div class="card">
+            <img src="../img/img-home-1.jpg" />
+            <div class="card-content">
+                <h1 class="Titulodoprojeto">Sportech</h1>
+                <p class="DescricaodoProjeto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Curabitur semper magna vel leo auctor, at mattis mi laoreet.</p>
+                <a href="#" class="card-button">Saiba Mais</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../img/img-home-2.jpg" />
+            <div class="card-content">
+                <h1 class="Titulodoprojeto">Turisantos</h1>
+                <p class="DescricaodoProjeto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Curabitur semper magna vel leo auctor, at mattis mi laoreet.</p>
+                <a href="#" class="card-button">Saiba Mais</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../img/img-home-1.jpg" />
+            <div class="card-content">
+                <h1 class="Titulodoprojeto">STUDY</h1>
+                <p class="DescricaodoProjeto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Curabitur semper magna vel leo auctor, at mattis mi laoreet. </p>
+                <a href="#" class="card-button">Saiba Mais</a>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
     </main>
 </body>

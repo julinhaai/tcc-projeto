@@ -90,6 +90,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="telas html\detalhes.aspx" />
+    <Content Include="telas html\editar.aspx" />
     <Content Include="telas html\img\img-home-1.jpg" />
     <Content Include="telas html\img\img-home-2.jpg" />
     <Content Include="telas html\aaaa.aspx" />
@@ -131,6 +133,20 @@
     </Compile>
     <Compile Include="telas html\cadastro.aspx.designer.cs">
       <DependentUpon>cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="telas html\detalhes.aspx.cs">
+      <DependentUpon>detalhes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telas html\detalhes.aspx.designer.cs">
+      <DependentUpon>detalhes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="telas html\editar.aspx.cs">
+      <DependentUpon>editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telas html\editar.aspx.designer.cs">
+      <DependentUpon>editar.aspx</DependentUpon>
     </Compile>
     <Compile Include="telas html\inicio.aspx.cs">
       <DependentUpon>inicio.aspx</DependentUpon>
