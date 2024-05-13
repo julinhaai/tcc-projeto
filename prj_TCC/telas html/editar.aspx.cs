@@ -20,7 +20,7 @@ namespace prj_TCC.telas_html
                     int projetoId = Convert.ToInt32(Request.QueryString["projetoId"]);
 
                     // Carregar as informações do projeto para edição
-                    CarregarInformacoesDoProjeto(projetoId);
+                    //CarregarInformacoesDoProjeto(projetoId);
                 }
             }
 

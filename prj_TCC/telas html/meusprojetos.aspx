@@ -10,6 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="lblNomeUsuario" runat="server" Text="Label"></asp:Label>
             Projeto Sonhos sobre Rodas
             <img src="img/souluna.jpg" />
             <asp:Button ID="btnalterar" runat="server" Text="Alterar Imagem" OnClick="btnalterar_Click" />

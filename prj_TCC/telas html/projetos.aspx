@@ -27,6 +27,7 @@
             <a href="projetos.aspx" style="--i:1;">Projetos</a>
             <a href="suporte.aspx"style="--i:2;">Suporte</a>
             <a href="sobre.aspx" style="--i:3;">Sobre Nós</a>
+            <asp:Label ID="lblNomeUsuario" runat="server" Text=""></asp:Label>
 
         </nav>
     </header>
