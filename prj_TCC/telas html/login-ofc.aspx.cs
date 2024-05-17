@@ -105,7 +105,7 @@ namespace prj_TCC
                     string senhaArmazenadaAdministrador = tipoUsuario == "tb_administrador" && dados.GetOrdinal("cd_senhaAdministrador") != -1 ? dados["cd_senhaAdministrador"].ToString() : ""; // Senha do administrador
                     string senhaArmazenadaAluno = tipoUsuario == "tb_aluno" && dados.GetOrdinal("cd_senhaAluno") != -1 ? dados["cd_senhaAluno"].ToString() : ""; // Senha do aluno
 
-                    string senhaDigitada = txtSenha.Text;
+                    string senhaDigitada = txtSenha.Text;                                                                                                                                                    
 
                     if (VerificarSenha(senhaDigitada, senhaArmazenada, senhaArmazenadaAdministrador, senhaArmazenadaAluno))
                     {
