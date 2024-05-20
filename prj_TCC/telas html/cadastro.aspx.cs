@@ -121,6 +121,10 @@ namespace prj_TCC.telas_html
             txtConfirma.Text = string.Empty;
             txtCPF.Text = string.Empty;
         }
-       
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

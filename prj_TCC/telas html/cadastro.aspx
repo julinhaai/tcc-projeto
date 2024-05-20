@@ -13,43 +13,77 @@
        <div class="img-box">
            <img src="img/form-img.png" alt=" " />
        </div>
+       </div>
        <div class="form-box">
            <h2>Criar conta</h2>
            <p>Já é um membro? <a href="login-ofc.aspx">Login</a></p>
            <form id="form1" runat="server">
-               <div class="input-group">
-                   <asp:Label ID="lblNome" runat="server"  CssClass="label" Text="Nome Completo"></asp:Label>
-                   <asp:TextBox ID="txtNome" runat="server"  CssClass="text" placeholder="Digite o seu nome completo"></asp:TextBox>
+               <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+               <div class="divAluno">
+
+               <div class="divAluno">
+                   <asp:Label ID="lblNomeAluno" runat="server"  CssClass="label" Text="Nome Completo"></asp:Label>
+                   <asp:TextBox ID="txtNomeAluno" runat="server"  CssClass="text" placeholder="Digite o seu nome completo"></asp:TextBox>
                </div>
 
-               <div class="input-group">
-                   <asp:Label ID="lblEmail" runat="server" CssClass="label" Text="Email"></asp:Label>
-                   <asp:TextBox ID="txtEmail" runat="server" CssClass="text" placeholder="Digite o seu Email"></asp:TextBox>
+               <div class="divAluno">
+                   <asp:Label ID="lblEmailAluno" runat="server" CssClass="label" Text="Email"></asp:Label>
+                   <asp:TextBox ID="txtEmailAluno" runat="server" CssClass="text" placeholder="Digite o seu Email"></asp:TextBox>
                </div>
 
-               <div class="input-group">
-                   <asp:Label ID="lblCPF" runat="server" CssClass="label" Text="CPF:"></asp:Label>
-                   <asp:TextBox ID="txtCPF" runat="server" CssClass="text" placeholder="Insira seu CPF"></asp:TextBox>
+               <div class="divAluno">
+                   <asp:Label ID="lblRM" runat="server" CssClass="label" Text="CPF:"></asp:Label>
+                   <asp:TextBox ID="txtRM" runat="server" CssClass="text" placeholder="Insira seu CPF"></asp:TextBox>
                </div>
 
-               <div class="input-group w50">
-                   <asp:Label ID="lblSenha" runat="server" CssClass="label" Text="Digite sua senha"></asp:Label>
-                   <asp:TextBox ID="txtSenha" TextMode="Password" CssClass="text" runat="server" placeholder="Digite sua senha"></asp:TextBox>
+               <div class="divAluno">
+                   <asp:Label ID="lblSenhaAluno" runat="server" CssClass="label" Text="Digite sua senha"></asp:Label>
+                   <asp:TextBox ID="txtSenhaAluno" TextMode="Password" CssClass="text" runat="server" placeholder="Digite sua senha"></asp:TextBox>
                </div>
 
-               <div class="input-group w50">
-                   <asp:Label ID="lblConfirma" runat="server" CssClass="label" Text="Confirmar senha"></asp:Label>
-                   <asp:TextBox ID="txtConfirma" TextMode="Password" CssClass="text" runat="server" placeholder="Confirme sua senha"></asp:TextBox>
+               <div class="divAluno">
+                   <asp:Label ID="lblConfirmaAluno" runat="server" CssClass="label" Text="Confirmar senha"></asp:Label>
+                   <asp:TextBox ID="txtConfirmaAluno" TextMode="Password" CssClass="text" runat="server" placeholder="Confirme sua senha"></asp:TextBox>
                </div>
 
-               <div class="input-group">
+               <div class="divAluno">
                    <asp:Button ID="btnCadastro" cssclass="button" runat="server" Text="Cadastrar" OnClick="btnCadastro_Click" />
                    <asp:Label ID="lblObs" runat="server" Text="" CssClass="label-obs"></asp:Label>
                </div>
+                   </div>
 
            </form>
        </div>
-   </div>
+
+    <div class="divUsuário">
+                   <asp:Label ID="lblNomeUsuario" runat="server"  CssClass="label" Text="Nome Completo"></asp:Label>
+                   <asp:TextBox ID="txtNomeUsuario" runat="server"  CssClass="text" placeholder="Digite o seu nome completo"></asp:TextBox>
+               </div>
+
+               <div class="divUsuário">
+                   <asp:Label ID="Label2" runat="server" CssClass="label" Text="Email"></asp:Label>
+                   <asp:TextBox ID="TextBox2" runat="server" CssClass="text" placeholder="Digite o seu Email"></asp:TextBox>
+               </div>
+
+               <div class="divUsuário">
+                   <asp:Label ID="Label3" runat="server" CssClass="label" Text="CPF:"></asp:Label>
+                   <asp:TextBox ID="TextBox3" runat="server" CssClass="text" placeholder="Insira seu CPF"></asp:TextBox>
+               </div>
+
+               <div class="divUsuário">
+                   <asp:Label ID="Label4" runat="server" CssClass="label" Text="Digite sua senha"></asp:Label>
+                   <asp:TextBox ID="TextBox4" TextMode="Password" CssClass="text" runat="server" placeholder="Digite sua senha"></asp:TextBox>
+               </div>
+
+               <div class="divUsuário">
+                   <asp:Label ID="Label5" runat="server" CssClass="label" Text="Confirmar senha"></asp:Label>
+                   <asp:TextBox ID="TextBox5" TextMode="Password" CssClass="text" runat="server" placeholder="Confirme sua senha"></asp:TextBox>
+               </div>
+
+               <div class="divUsuário">
+                   <asp:Button ID="Button1" cssclass="button" runat="server" Text="Cadastrar" OnClick="btnCadastro_Click" />
+                   <asp:Label ID="Label6" runat="server" Text="" CssClass="label-obs"></asp:Label>
+               </div>
 </body>
 </html>
 
