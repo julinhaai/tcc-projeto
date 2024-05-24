@@ -123,22 +123,22 @@ namespace prj_TCC.telas_html
         protected global::System.Web.UI.WebControls.TextBox txtConfirmaAluno;
 
         /// <summary>
-        /// Controle btnCadastro.
+        /// Controle btnCadastroAluno.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCadastro;
+        protected global::System.Web.UI.WebControls.Button btnCadastroAluno;
 
         /// <summary>
-        /// Controle lblObs.
+        /// Controle lblObsAluno.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblObs;
+        protected global::System.Web.UI.WebControls.Label lblObsAluno;
 
         /// <summary>
         /// Controle lblNomeUsuario.
@@ -159,93 +159,93 @@ namespace prj_TCC.telas_html
         protected global::System.Web.UI.WebControls.TextBox txtNomeUsuario;
 
         /// <summary>
-        /// Controle Label2.
+        /// Controle lblEmailUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblEmailUsuario;
 
         /// <summary>
-        /// Controle TextBox2.
+        /// Controle txtEmailUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtEmailUsuario;
 
         /// <summary>
-        /// Controle Label3.
+        /// Controle lblCPFUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lblCPFUsuario;
 
         /// <summary>
-        /// Controle TextBox3.
+        /// Controle txtCPFUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtCPFUsuario;
 
         /// <summary>
-        /// Controle Label4.
+        /// Controle lblSenhaUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label lblSenhaUsuario;
 
         /// <summary>
-        /// Controle TextBox4.
+        /// Controle txtSenhaUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtSenhaUsuario;
 
         /// <summary>
-        /// Controle Label5.
+        /// Controle lblConfirmaUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label lblConfirmaUsuario;
 
         /// <summary>
-        /// Controle TextBox5.
+        /// Controle txtConfirmaUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox txtConfirmaUsuario;
 
         /// <summary>
-        /// Controle Button1.
+        /// Controle btnCadastroUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnCadastroUsuario;
 
         /// <summary>
-        /// Controle Label6.
+        /// Controle lblObsUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label lblObsUsuario;
     }
 }
