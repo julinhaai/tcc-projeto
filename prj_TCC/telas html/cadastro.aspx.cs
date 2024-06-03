@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,19 +13,24 @@ namespace prj_TCC.telas_html
     public partial class cadastro : System.Web.UI.Page
     {
         //public virtual string UserName { get; set; }
-        public class divAluno { };
-        public class divUsuario { };
         protected void Page_Load(object sender, EventArgs e)
         {
             //colocar para identificar usuário.
 
             if (!IsPostBack)
             {
+                DropDownList1.Items.Insert(0, new ListItem("---Selecione---", ""));
                 divAluno.Visible = false;
                 divUsuario.Visible = false;
 
             }
 
+        }
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedValue = DropDownList1.SelectedValue;
+            divAluno.Visible = selectedValue == "Aluno";
+            divUsuario.Visible = selectedValue == "Usuário";
         }
 
         private static MySqlConnection Conexao()
@@ -36,6 +43,8 @@ namespace prj_TCC.telas_html
             conexao.Open();                                            // abro a conexão
             return conexao;
         }
+
+
         //protected void btnCadastro_Click(object sender, EventArgs e)
         //{
         //    if (txtNome.Text == string.Empty || txtEmail.Text == string.Empty || txtSenha.Text == string.Empty || txtConfirma.Text == string.Empty)
@@ -112,14 +121,14 @@ namespace prj_TCC.telas_html
 
 
         //    }
-            
+
 
         //}
 
         private void limpar_cpf()
         {
-           //txtCPF.Text = string.Empty;
-           
+            //txtCPF.Text = string.Empty;
+
         }
 
         private void Limpar()
@@ -131,9 +140,36 @@ namespace prj_TCC.telas_html
             //txtCPF.Text = string.Empty;
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btnCadastroAluno_Click(object sender, EventArgs e)
         {
+            using (MySqlConnection conn = Conexao()) 
+            {
+                string query = "INSERT INTO tb_aluno (cd_RMAluno, ds_emailInstitucionalAluno, nm_aluno, cd_senhaAluno) VALUES (@cd_RMAluno, @ds_emailInstitucionalAluno, @nm_aluno, @cd_senhaAluno)";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@cd_RMAluno", txtRM.Text);
+                cmd.Parameters.AddWithValue("@ds_emailInstitucionalAluno", txtEmailAluno.Text);
+                cmd.Parameters.AddWithValue("@nm_aluno", txtNomeAluno.Text);
+                cmd.Parameters.AddWithValue("@cd_senhaAluno", txtSenhaAluno.Text);
+                cmd.ExecuteNonQuery();
+                lblObsAluno.Text = "Aluno cadastrado com sucesso!";
+            }
+               
+        }
 
+        protected void btnCadastroUsuario_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection conn = Conexao())
+            {
+                string query = "INSERT INTO tb_usuario (cd_cpfUsuario, nm_usuario, cd_senha,ds_email,) VALUES (@cd_cpfUsuario, @nm_usuario, @cd_senha, @ds_email)";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@cd_cpfUsuario", txtCPFUsuario.Text);
+                cmd.Parameters.AddWithValue("@nm_usuario", txtNomeUsuario.Text);
+                cmd.Parameters.AddWithValue("@cd_senha", txtSenhaUsuario.Text);
+                cmd.Parameters.AddWithValue("@ds_email", txtEmailUsuario.Text);
+                cmd.ExecuteNonQuery();
+                lblObsUsuario.Text = "Usuário cadastrado com sucesso!";
+            }
         }
     }
+    
 }
