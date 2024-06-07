@@ -19,18 +19,34 @@ namespace prj_TCC.telas_html
 
             if (!IsPostBack)
             {
-                DropDownList1.Items.Insert(0, new ListItem("---Selecione---", ""));
+                //DropDownList1.Items.Insert(0, new ListItem("---Selecione---", ""));
                 divAluno.Visible = false;
                 divUsuario.Visible = false;
 
             }
 
         }
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ddlitens_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedValue = DropDownList1.SelectedValue;
-            divAluno.Visible = selectedValue == "Aluno";
-            divUsuario.Visible = selectedValue == "Usuário";
+            //string selectedValue = DropDownList1.SelectedValue;
+            //divAluno.Visible = selectedValue == "Aluno";
+            //divUsuario.Visible = selectedValue == "Usuário";
+
+            if (ddlitens.SelectedIndex == 0)
+            {
+                divAluno.Visible=false; 
+                divUsuario.Visible=false;
+            }
+            if (ddlitens.SelectedIndex == 1)
+            {
+                divUsuario.Visible = false;
+                divAluno.Visible = ddlitens.SelectedValue == "1";
+            }
+            if (ddlitens.SelectedIndex == 2)
+            {
+                divAluno.Visible = false;
+                divUsuario.Visible = ddlitens.SelectedValue == "2";
+            }
         }
 
         private static MySqlConnection Conexao()
@@ -142,6 +158,10 @@ namespace prj_TCC.telas_html
 
         protected void btnCadastroAluno_Click(object sender, EventArgs e)
         {
+            if (txtNomeAluno.Text == string.Empty || txtEmailAluno.Text == string.Empty || txtRM.Text == string.Empty || txtSenhaAluno.Text == string.Empty || txtConfirmaAluno.Text == string.Empty)
+            {
+                lblObsAluno.Text = "Digite todos os campos!" ;
+            }
             using (MySqlConnection conn = Conexao()) 
             {
                 string query = "INSERT INTO tb_aluno (cd_RMAluno, ds_emailInstitucionalAluno, nm_aluno, cd_senhaAluno) VALUES (@cd_RMAluno, @ds_emailInstitucionalAluno, @nm_aluno, @cd_senhaAluno)";
