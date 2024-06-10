@@ -162,16 +162,23 @@ namespace prj_TCC.telas_html
             {
                 lblObsAluno.Text = "Digite todos os campos!" ;
             }
-            using (MySqlConnection conn = Conexao()) 
+            else
             {
-                string query = "INSERT INTO tb_aluno (cd_RMAluno, ds_emailInstitucionalAluno, nm_aluno, cd_senhaAluno) VALUES (@cd_RMAluno, @ds_emailInstitucionalAluno, @nm_aluno, @cd_senhaAluno)";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@cd_RMAluno", txtRM.Text);
-                cmd.Parameters.AddWithValue("@ds_emailInstitucionalAluno", txtEmailAluno.Text);
-                cmd.Parameters.AddWithValue("@nm_aluno", txtNomeAluno.Text);
-                cmd.Parameters.AddWithValue("@cd_senhaAluno", txtSenhaAluno.Text);
-                cmd.ExecuteNonQuery();
-                lblObsAluno.Text = "Aluno cadastrado com sucesso!";
+                if (txtSenhaAluno == txtConfirmaAluno)
+                {
+                    using (MySqlConnection conn = Conexao())
+                    {
+                        string query = "INSERT INTO tb_aluno (cd_RMAluno, ds_emailInstitucionalAluno, nm_aluno, cd_senhaAluno) VALUES (@cd_RMAluno, @ds_emailInstitucionalAluno, @nm_aluno, @cd_senhaAluno)";
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@cd_RMAluno", txtRM.Text);
+                        cmd.Parameters.AddWithValue("@ds_emailInstitucionalAluno", txtEmailAluno.Text);
+                        cmd.Parameters.AddWithValue("@nm_aluno", txtNomeAluno.Text);
+                        cmd.Parameters.AddWithValue("@cd_senhaAluno", txtSenhaAluno.Text);
+                        cmd.ExecuteNonQuery();
+                        lblObsAluno.Text = "Aluno cadastrado com sucesso!";
+                    }
+
+                }
             }
                
         }
