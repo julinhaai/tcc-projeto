@@ -103,7 +103,9 @@ namespace prj_TCC.telas_html
             cmd.Parameters.AddWithValue("@valor", valor);
             return Convert.ToInt32(cmd.ExecuteScalar()) > 0;
         }
+    
 
+       
         protected void btnCadastroAluno_Click(object sender, EventArgs e)
         {
             if (CamposPreenchidosAluno() && SenhasConferem(txtSenhaAluno.Text, txtConfirmaAluno.Text))
