@@ -154,10 +154,11 @@ namespace prj_TCC.telas_html
                         lblObsUsuario.Text = "Usuário já cadastrado!";
                     }
                 }
-
-
             }
-
+            else
+            {
+                lblObsUsuario.Text = "Verifique se todos os campos estão preenchidos corretamente e se o CPF é válido.";
+            }
         }
     }
     
