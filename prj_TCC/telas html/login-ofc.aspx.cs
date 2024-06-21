@@ -15,7 +15,14 @@ namespace prj_TCC
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                //DropDownList1.Items.Insert(0, new ListItem("---Selecione---", ""));
+                divAdministrador.Visible = false;   
+                divAluno.Visible = false;
+                divUsuario.Visible = false;
 
+            }
         }
         private static MySqlConnection Conexao()
         {
@@ -27,149 +34,118 @@ namespace prj_TCC
             conexao.Open();                                            // abro a conexão
             return conexao;
         }
-        protected void btnlogin2_Click(object sender, EventArgs e)
+
+        protected void btnloginAdministrador_Click(object sender, EventArgs e)
         {
-            //    MySqlConnection conexao = Conexao();
-            //    string comando = "SELECT * ";
-            //    comando += "FROM tb_usuario WHERE ds_email = ";
-            //    comando += "'" + txtEmail.Text + "' AND cd_senha = ";
-            //    comando += "'" + txtSenha.Text + "'";
-            //    MySqlCommand cSQL = new MySqlCommand(comando, conexao);
-            //    MySqlDataReader dados = cSQL.ExecuteReader();
+            string rm = txtRMAdministrador.Text;
+            string senha = txtSenhaAdministrador.Text;
 
-            //    if (dados.HasRows)
-            //    {
-            //        dados.Read();
-            //        //Session["NomeUsuario"] = dados[1].ToString(); // Substitua "nome" pelo nome da coluna que contém o nome do usuário
-            //        string senhaArmazenada = dados["cd_senha"].ToString(); // Obtendo a senha armazenada no banco de dados
-            //        string senhaDigitada = txtSenha.Text;
-            //        if (VerificarSenha(senhaDigitada, senhaArmazenada))
-            //        {
-            //            // Senha correta, autenticar o usuário
-            //            Session["NomeUsuario"] = dados[1].ToString(); // Substitua "nome" pelo nome da coluna que contém o nome do usuário
-            //            Response.Redirect("projetos.aspx");
-            //        }
-            //        else
-            //        {// Senha incorreta
-            //            Limpar();
-            //            lblObs.Text = "Senha incorreta.";
-
-            //        }
-            //        Response.Redirect("inicio.aspx");
-            //    }
-            //    else
-            //    {
-            //        Limpar();
-            //        lblObs.Text = "Usuário não cadastrado ou senha incorreta.";
-            //    }
-
-            //    conexao.Close();
-
-            //}
-            //// Função para verificar se a senha digitada pelo usuário é correta
-            //private bool VerificarSenha(string senhaDigitada, string senhaArmazenada)
-            //{
-            //    using (SHA256 sha256 = SHA256.Create())
-            //    {
-            //        // Obtemos o hash da senha digitada pelo usuário
-            //        byte[] bytesSenhaDigitada = sha256.ComputeHash(Encoding.UTF8.GetBytes(senhaDigitada));
-            //        StringBuilder builder = new StringBuilder();
-
-            //        // Convertendo o array de bytes em uma string hexadecimal
-            //        for (int i = 0; i < bytesSenhaDigitada.Length; i++)
-            //        {
-            //            builder.Append(bytesSenhaDigitada[i].ToString("x2"));
-            //        }
-            //        string senhaDigitadaHash = builder.ToString();
-
-            //        // Comparando o hash da senha digitada com o hash da senha armazenada
-            //        return senhaDigitadaHash == senhaArmazenada;
-            //    }
-
-            MySqlConnection conexao = Conexao();
-            string comando = "SELECT * FROM (";
-            comando += "SELECT 'tb_usuario' AS tipo, ds_email, cd_senha FROM tb_usuario UNION ALL ";
-            comando += "SELECT 'tb_administrador' AS tipo, ds_emailAdministrador AS ds_email, cd_senhaAdministrador AS cd_senha FROM tb_administrador UNION ALL ";
-            comando += "SELECT 'tb_aluno' AS tipo, ds_emailInstitucionalAluno AS ds_email, cd_senhaAluno AS cd_senha FROM tb_aluno) AS users ";
-            comando += "WHERE ds_email = @Email";
-
-            MySqlCommand cSQL = new MySqlCommand(comando, conexao);
-            cSQL.Parameters.AddWithValue("@Email", txtEmail.Text);
-
-            using (MySqlDataReader dados = cSQL.ExecuteReader())
+            if (Login("tb_administrador", "cd_RMadministrador", "cd_senhaAdministrador", rm, senha))
             {
-                if (dados.Read())
+                Response.Redirect("minhaarea.aspx");
+            }
+            else
+            {
+                lblObs.Text = "RM ou senha incorretos.";
+                Limpar();
+            }
+        }
+
+        protected void btnloginAluno_Click(object sender, EventArgs e)
+        {
+            string rm = txtRMAluno.Text;
+            string senha = txtSenhaAluno.Text;
+
+            if (Login("tb_aluno", "cd_RMAluno", "cd_senhaAluno", rm, senha))
+            {
+                Response.Redirect("minhaarea.aspx");
+            }
+            else
+            {
+                lblObs.Text = "RM ou senha incorretos.";
+                Limpar();
+            }
+        }
+
+        protected void btnloginUsuario_Click(object sender, EventArgs e)
+        {
+            string cpf = txtCPFUsuario.Text;
+            string senha = txtSenhaUsuario.Text;
+
+            if (Login("tb_usuario", "cd_cpfUsuario", "cd_senha", cpf, senha))
+            {
+                Response.Redirect("projetos.aspx");
+            }
+            else
+            {
+                lblObs.Text = "CPF ou senha incorretos.";
+                Limpar();
+            }
+        }
+
+        private bool Login(string tabela, string colunaIdentificador, string colunaSenha, string identificador, string senha)
+        {
+            using (MySqlConnection conexao = Conexao())
+            {
+                string query = $"SELECT {colunaSenha} FROM {tabela} WHERE {colunaIdentificador} = @identificador";
+                MySqlCommand cmd = new MySqlCommand(query, conexao);
+                cmd.Parameters.AddWithValue("@identificador", identificador);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
-                    string tipoUsuario = dados["tipo"].ToString();
-                    string senhaArmazenada = dados["cd_senha"].ToString(); // Senha padrão
-                    string senhaArmazenadaAdministrador = tipoUsuario == "tb_administrador" && dados.GetOrdinal("cd_senhaAdministrador") != -1 ? dados["cd_senhaAdministrador"].ToString() : ""; // Senha do administrador
-                    string senhaArmazenadaAluno = tipoUsuario == "tb_aluno" && dados.GetOrdinal("cd_senhaAluno") != -1 ? dados["cd_senhaAluno"].ToString() : ""; // Senha do aluno
-
-                    string senhaDigitada = txtSenha.Text;                                                                                                                                                    
-
-                    if (VerificarSenha(senhaDigitada, senhaArmazenada, senhaArmazenadaAdministrador, senhaArmazenadaAluno))
+                    if (reader.Read())
                     {
-                        Session["NomeUsuario"] = txtEmail.Text;
-
-                        switch (tipoUsuario)
-                        {
-                            case "tb_usuario":
-                                // Redirecionar para a página de usuário
-                                Response.Redirect("projetos.aspx");
-                                break;
-                            case "tb_administrador":
-                                // Redirecionar para a página de administrador
-                                Response.Redirect("minhaarea.aspx");
-                                break;
-                            case "tb_aluno":
-                                // Redirecionar para a página de aluno
-                                Response.Redirect("minhaarea.aspx");
-                                break;
-                            default:
-                                // Tipo de usuário não reconhecido
-                                lblObs.Text = "Tipo de usuário não reconhecido.";
-                                break;
-                        }
+                        string senhaArmazenada = reader[colunaSenha].ToString();
+                        return VerificarSenha(senha, senhaArmazenada);
+                        string nomeUsuario = reader[2].ToString();
+                        Session["NomeUsuario"] = nomeUsuario;
+                        return true;
                     }
                     else
                     {
-                        Limpar();
-                        lblObs.Text = "Senha incorreta.";
+                        return false;
                     }
                 }
-                else
-                {
-                    Limpar();
-                    lblObs.Text = "Usuário não cadastrado.";
-                }
             }
-
-            conexao.Close();
         }
 
-
-        // Função para verificar se a senha digitada pelo usuário é correta
-        private bool VerificarSenha(string senhaDigitada, string senhaArmazenadaUsuario, string senhaArmazenadaAdministrador, string senhaArmazenadaAluno)
+        // Função simplificada para verificar se a senha digitada pelo usuário é correta
+        private bool VerificarSenha(string senhaDigitada, string senhaArmazenada)
         {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytesSenhaDigitada = sha256.ComputeHash(Encoding.UTF8.GetBytes(senhaDigitada));
-                string senhaDigitadaHash = BitConverter.ToString(bytesSenhaDigitada).Replace("-", "").ToLower();
-
-                // Comparando o hash da senha digitada com os hashes das senhas armazenadas
-                return senhaDigitadaHash == senhaArmazenadaUsuario || senhaDigitadaHash == senhaArmazenadaAdministrador || senhaDigitadaHash == senhaArmazenadaAluno;
-            }
+            return senhaDigitada == senhaArmazenada;
         }
+
 
 
 
         private void Limpar()
         {
-            //txtNome.Text = string.Empty;
-            txtEmail.Text = string.Empty;
-            txtSenha.Text = string.Empty;
-            //txtConfirma.Text = string.Empty;
-            //txtCPFouCNPJ.Text = string.Empty;
+            txtRMAdministrador.Text = string.Empty;
+            txtSenhaAdministrador.Text = string.Empty;
+            txtRMAluno.Text = string.Empty;
+            txtSenhaAluno.Text = string.Empty;
+            txtCPFUsuario.Text = string.Empty;
+            txtSenhaUsuario.Text = string.Empty;
+        }
+
+        protected void ddllogin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            divAdministrador.Visible=false;
+            divAluno.Visible = false;
+            divUsuario.Visible = false;
+
+            if (ddllogin.SelectedValue == "1")
+            {
+                divAdministrador.Visible = true;
+            }
+            else if (ddllogin.SelectedValue == "2")
+            {
+                divAluno.Visible = true;
+            }
+            else if (ddllogin.SelectedValue == "3")
+            {
+                divUsuario.Visible=true;
+            }
         }
     }
     

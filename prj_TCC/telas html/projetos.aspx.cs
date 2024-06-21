@@ -10,11 +10,6 @@ namespace prj_TCC.telas_html
 {
     public partial class projetos : System.Web.UI.Page
     {
-        public class Project
-        {
-            public int Id { get; set; }
-            public string Name { get; set; }
-        }
         private static MySqlConnection Conexao()
         {
             string strConexao = "SERVER=localhost;";                   // crio a string de conexão com todos os dados                
@@ -28,34 +23,7 @@ namespace prj_TCC.telas_html
         protected void Page_Load(object sender, EventArgs e)
         {
             lblNomeUsuario.Text = "Bem-vindo, " + Session["NomeUsuario"].ToString(); 
-            //if (!IsPostBack)
-            //{
-            //    MySqlConnection conexao = new MySqlConnection Conexao();
-            //    string comando = "SELECT * ";
-            //    comando += " FROM tb_projeto WHERE nm_projeto  ";
-            //    comando += " AND ds_resumoProjeto  ";
-            //    comando += "'" + txtEmail.Text + "' AND cd_senha = ";
-            //    comando += "'" + txtSenha.Text + "'";
-            //    MySqlCommand cSQL = new MySqlCommand(comando, conexao);
-            //    MySqlDataReader dados = cSQL.ExecuteReader();
-            //    //MySqlDataReader reader = cmd.ExecuteReader();
-
-            //    while (reader.Read())
-            //    {
-            //        string nome = reader.GetString(0);
-            //        string descricao = reader.GetString(1);
-
-            //        AdicionarProjetoNaPaginaInicial(nome, descricao);
-            //    }
-
-            //    conexao.Close();
-            //}
-
         }
-        //private void AdicionarProjetoNaPaginaInicial(object sender,EventArgs e)
-        //{
-        
-            
-        //}
+
     }
 }

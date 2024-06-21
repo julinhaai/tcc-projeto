@@ -103,9 +103,9 @@ namespace prj_TCC.telas_html
             cmd.Parameters.AddWithValue("@valor", valor);
             return Convert.ToInt32(cmd.ExecuteScalar()) > 0;
         }
-    
 
-       
+
+
         protected void btnCadastroAluno_Click(object sender, EventArgs e)
         {
             if (CamposPreenchidosAluno() && SenhasConferem(txtSenhaAluno.Text, txtConfirmaAluno.Text))
@@ -125,11 +125,14 @@ namespace prj_TCC.telas_html
                     }
                     else
                     {
-                        lblObsAluno.Text = "Aluno já cadastrado!";
+                        lblObsAluno.Text = "RM já cadastrado!";
                     }
                 }
             }
-
+            else
+            {
+                lblObsAluno.Text = "Verifique se todos os campos estão preenchidos corretamente.";
+            }
         }
 
         protected void btnCadastroUsuario_Click(object sender, EventArgs e)
@@ -151,13 +154,21 @@ namespace prj_TCC.telas_html
                     }
                     else
                     {
-                        lblObsUsuario.Text = "Usuário já cadastrado!";
+                        lblObsUsuario.Text = "CPF já cadastrado!";
                     }
                 }
             }
-            else
+            else if (!CamposPreenchidosUsuario())
             {
-                lblObsUsuario.Text = "Verifique se todos os campos estão preenchidos corretamente e se o CPF é válido.";
+                lblObsUsuario.Text = "Verifique se todos os campos estão preenchidos corretamente.";
+            }
+            else if (!SenhasConferem(txtSenhaUsuario.Text, txtConfirmaUsuario.Text))
+            {
+                lblObsUsuario.Text = "As senhas não conferem!";
+            }
+            else if (!ValidaCPF(txtCPFUsuario.Text))
+            {
+                lblObsUsuario.Text = "CPF inválido!";
             }
         }
     }

@@ -8,7 +8,7 @@
     <style>
         .hidden { display: none; }
     </style>
-    <title>Ideias Vivas</title>
+    <title>Cadastro - Ideias Vivas</title>
 </head>
 <body>
     <div class="box">
