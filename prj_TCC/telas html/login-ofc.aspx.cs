@@ -40,7 +40,7 @@ namespace prj_TCC
             string rm = txtRMAdministrador.Text;
             string senha = txtSenhaAdministrador.Text;
 
-            if (Login("tb_administrador", "cd_RMadministrador", "cd_senhaAdministrador", rm, senha))
+            if (Login("tb_administrador", "cd_RMadministrador", "cd_senhaAdministrador", "nm_administrador", rm, senha))
             {
                 Response.Redirect("minhaarea.aspx");
             }
@@ -56,7 +56,7 @@ namespace prj_TCC
             string rm = txtRMAluno.Text;
             string senha = txtSenhaAluno.Text;
 
-            if (Login("tb_aluno", "cd_RMAluno", "cd_senhaAluno", rm, senha))
+            if (Login("tb_aluno", "cd_RMAluno", "cd_senhaAluno", "nm_aluno", rm, senha))
             {
                 Response.Redirect("minhaarea.aspx");
             }
@@ -72,7 +72,7 @@ namespace prj_TCC
             string cpf = txtCPFUsuario.Text;
             string senha = txtSenhaUsuario.Text;
 
-            if (Login("tb_usuario", "cd_cpfUsuario", "cd_senha", cpf, senha))
+            if (Login("tb_usuario", "cd_cpfUsuario", "cd_senha", "nm_usuario", cpf, senha))
             {
                 Response.Redirect("projetos.aspx");
             }
@@ -83,11 +83,11 @@ namespace prj_TCC
             }
         }
 
-        private bool Login(string tabela, string colunaIdentificador, string colunaSenha, string identificador, string senha)
+        private bool Login(string tabela, string colunaIdentificador, string colunaSenha, string colunaNome, string identificador, string senha)
         {
             using (MySqlConnection conexao = Conexao())
             {
-                string query = $"SELECT {colunaSenha} FROM {tabela} WHERE {colunaIdentificador} = @identificador";
+                string query = $"SELECT {colunaNome}, {colunaSenha} FROM {tabela} WHERE {colunaIdentificador} = @identificador";
                 MySqlCommand cmd = new MySqlCommand(query, conexao);
                 cmd.Parameters.AddWithValue("@identificador", identificador);
 
@@ -96,15 +96,14 @@ namespace prj_TCC
                     if (reader.Read())
                     {
                         string senhaArmazenada = reader[colunaSenha].ToString();
-                        return VerificarSenha(senha, senhaArmazenada);
-                        string nomeUsuario = reader[2].ToString();
-                        Session["NomeUsuario"] = nomeUsuario;
-                        return true;
+                        string nomeUsuario = reader[colunaNome].ToString();
+                        if (VerificarSenha(senha, senhaArmazenada))
+                        {
+                            Session["NomeUsuario"] = nomeUsuario;
+                            return true;
+                        }
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    return false;
                 }
             }
         }

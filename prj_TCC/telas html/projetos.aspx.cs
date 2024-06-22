@@ -22,7 +22,14 @@ namespace prj_TCC.telas_html
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblNomeUsuario.Text = "Bem-vindo, " + Session["NomeUsuario"].ToString(); 
+            if (Session["NomeUsuario"] != null)
+            {
+                lblNomeUsuario.Text = "Bem-vindo, " + Session["NomeUsuario"].ToString();
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
         }
 
     }

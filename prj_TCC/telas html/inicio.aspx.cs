@@ -21,11 +21,10 @@ namespace prj_TCC.telas_html
                     lnkMinhaArea.Text = "Minha Área";
                     lnkMinhaArea.NavigateUrl = "minhaarea.aspx";
                 }
-                //else
-                //{
-                //    // Se o nome do usuário não estiver na sessão, redirecione para a página de login
-                //    Response.Redirect("login.aspx"); 
-                //}
+                else
+                {
+                    lblNomeUsuario.Text = "Bem-vindo";
+                }
             }
         }
 
